@@ -22,6 +22,7 @@ class CensusDataLoader(DataLoader):
     def __iter__(self):
         for tensors in super().__iter__():
             x, _ = tensors
+            # print(x.shape)
             yield {
                 REGISTRY_KEYS.X_KEY: x,
                 REGISTRY_KEYS.BATCH_KEY: torch.zeros((x.shape[0], 1)),
@@ -112,25 +113,31 @@ class CensusDataModule(pl.LightningDataModule):
     def test_dataloader(self):
         pass
 
+    
+import sys
 
 def main():
-    census = cellxgene_census.open_soma()
+    obs_filter, devices, batch_size, max_epochs = sys.argv[1:]
+    print(f"{obs_filter=}\n{devices=}\n{batch_size=}\n{max_epochs=}")
 
-    obs_filter = "tissue_general == 'tongue' and is_primary_data == True"
+    # obs_filter = "tissue_general == 'tongue' and is_primary_data == True"
+    
+    census = cellxgene_census.open_soma(uri='/mnt/scratch/census')
+
 
     dp = ExperimentDataPipe(
         census["census_data"]["homo_sapiens"],
         measurement_name="RNA",
         X_name="raw",
         obs_query=somacore.AxisQuery(value_filter=obs_filter),
-        obs_column_names=["cell_type"],
-        batch_size=128,
+        batch_size=int(batch_size),
     )
+    print(f"training data shape={dp.shape}")
 
     shuffle_dp = dp.shuffle()
     model = CensusSCVI(shuffle_dp)
 
-    model.train(max_epochs=10, accelerator="gpu", devices=-1, strategy="ddp_find_unused_parameters_true")
+    model.train(max_epochs=int(max_epochs), accelerator="gpu", devices=int(devices), strategy="ddp_find_unused_parameters_true")
 
 
 if __name__ == "__main__":
