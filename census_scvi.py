@@ -124,7 +124,7 @@ def main():
     # obs_filter = "tissue_general == 'tongue' and is_primary_data == True"
     
     # census = cellxgene_census.open_soma()
-    census = cellxgene_census.open_soma(uri='/mnt/scratch/census')
+    census = cellxgene_census.open_soma(uri='/mnt/census')
 
     dp = ExperimentDataPipe(
         census["census_data"]["homo_sapiens"],
@@ -132,11 +132,16 @@ def main():
         X_name="raw",
         obs_query=somacore.AxisQuery(value_filter=obs_filter),
         batch_size=int(batch_size),
-        soma_buffer_bytes=2**16,
+#        soma_buffer_bytes=2**20,
     )
     print(f"training data shape={dp.shape}")
 
-    shuffle_dp = dp.shuffle()
+    for b, batch in enumerate(dp):
+        if b % 1000 == 0:
+            print(f"processed {b} batches")
+    # sys.exit(0)
+    
+    shuffle_dp = dp # .shuffle()
     model = CensusSCVI(shuffle_dp)
 
     model.train(max_epochs=int(max_epochs), accelerator="gpu", devices=int(devices), strategy="ddp_find_unused_parameters_true",
@@ -144,7 +149,7 @@ def main():
                 # for iterable datasets
                 # see https://pytorch-lightning.readthedocs.io/en/1.7.7/guides/data.html#iterable-datasets and
                 # https://lightning.ai/docs/pytorch/stable/common/trainer.html#val-check-interval
-                val_check_interval=100, check_val_every_n_epoch=None,
+                # val_check_interval=100, check_val_every_n_epoch=None,
                 )
 
 
