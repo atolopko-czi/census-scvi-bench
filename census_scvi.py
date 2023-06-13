@@ -136,9 +136,9 @@ def main():
     )
     print(f"training data shape={dp.shape}")
 
-    for b, batch in enumerate(dp):
-        if b % 1000 == 0:
-            print(f"processed {b} batches")
+    # for b, batch in enumerate(dp):
+    #     if b % 1000 == 0:
+    #         print(f"processed {b} batches")
     # sys.exit(0)
     
     shuffle_dp = dp # .shuffle()
