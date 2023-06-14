@@ -1,0 +1,36 @@
+logs/heart_1gpu_128batch_1epoch.txt:	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:46.08
+logs/heart_1gpu_256batch_1epoch.txt:	Elapsed (wall clock) time (h:mm:ss or m:ss): 11:52.06
+logs/heart_2gpu_128batch_1epoch.txt:	Elapsed (wall clock) time (h:mm:ss or m:ss): 19:12.51
+logs/heart_4gpu_128batch_1epoch.txt:	Elapsed (wall clock) time (h:mm:ss or m:ss): 26:25.23
+logs/heart_4gpu_512batch_1epoch.txt:	Elapsed (wall clock) time (h:mm:ss or m:ss): 17:52.87
+logs/heart_4gpu_512batch_2epoch.txt:	Elapsed (wall clock) time (h:mm:ss or m:ss): 56:15.79
+logs/heart_1gpu_128batch_1epoch.txt:|  run_training_epoch                                       	|  577.55         	|  1              	|  577.55         	|  99.624         	|
+logs/heart_1gpu_256batch_1epoch.txt:|  run_training_epoch                                       	|  697.95         	|  1              	|  697.95         	|  99.776         	|
+logs/heart_2gpu_128batch_1epoch.txt:|  run_training_epoch                                       	|  1138.6         	|  1              	|  1138.6         	|  99.404         	|
+logs/heart_4gpu_128batch_1epoch.txt:|  run_training_epoch                                       	|  1568.3         	|  1              	|  1568.3         	|  99.548         	|
+logs/heart_4gpu_512batch_1epoch.txt:|  run_training_epoch                                       	|  1055.6         	|  1              	|  1055.6         	|  99.309         	|
+logs/heart_4gpu_512batch_2epoch.txt:|  run_training_epoch                                       	|  1674.7         	|  2              	|  3349.4         	|  99.755         	|
+logs/heart_1gpu_128batch_1epoch.txt:|  run_training_batch                                       	|  0.017729       	|  12188          	|  216.08         	|  37.273         	|
+logs/heart_1gpu_256batch_1epoch.txt:|  run_training_batch                                       	|  0.030561       	|  6094           	|  186.24         	|  26.624         	|
+logs/heart_2gpu_128batch_1epoch.txt:|  run_training_batch                                       	|  0.066421       	|  12188          	|  809.54         	|  70.677         	|
+logs/heart_4gpu_128batch_1epoch.txt:|  run_training_batch                                       	|  0.075575       	|  12188          	|  921.11         	|  58.467         	|
+logs/heart_4gpu_512batch_1epoch.txt:|  run_training_batch                                       	|  0.11572        	|  3047           	|  352.59         	|  33.171         	|
+logs/heart_4gpu_512batch_2epoch.txt:|  run_training_batch                                       	|  0.073848       	|  24376          	|  1800.1         	|  53.613         	|
+logs/heart_1gpu_128batch_1epoch.txt:|  [_TrainingEpochLoop].train_dataloader_next               	|  0.017457       	|  12189          	|  212.78         	|  36.704         	|
+logs/heart_1gpu_256batch_1epoch.txt:|  [_TrainingEpochLoop].train_dataloader_next               	|  0.069338       	|  6095           	|  422.61         	|  60.415         	|
+logs/heart_2gpu_128batch_1epoch.txt:|  [_TrainingEpochLoop].train_dataloader_next               	|  0.013985       	|  12189          	|  170.46         	|  14.882         	|
+logs/heart_4gpu_128batch_1epoch.txt:|  [_TrainingEpochLoop].train_dataloader_next               	|  0.038853       	|  12189          	|  473.58         	|  30.06          	|
+logs/heart_4gpu_512batch_1epoch.txt:|  [_TrainingEpochLoop].train_dataloader_next               	|  0.20784        	|  3048           	|  633.5          	|  59.6           	|
+logs/heart_4gpu_512batch_2epoch.txt:|  [_TrainingEpochLoop].train_dataloader_next               	|  0.048921       	|  24378          	|  1192.6         	|  35.519         	|
+logs/heart_1gpu_128batch_1epoch.txt:|  [Strategy]DDPStrategy.backward                           	|  0.010756       	|  12188          	|  131.09         	|  22.612         	|
+logs/heart_1gpu_256batch_1epoch.txt:|  [Strategy]DDPStrategy.backward                           	|  0.021897       	|  6094           	|  133.44         	|  19.076         	|
+logs/heart_2gpu_128batch_1epoch.txt:|  [Strategy]DDPStrategy.backward                           	|  0.059243       	|  12188          	|  722.06         	|  63.039         	|
+logs/heart_4gpu_128batch_1epoch.txt:|  [Strategy]DDPStrategy.backward                           	|  0.066684       	|  12188          	|  812.75         	|  51.588         	|
+logs/heart_4gpu_512batch_1epoch.txt:|  [Strategy]DDPStrategy.backward                           	|  0.10304        	|  3047           	|  313.97         	|  29.538         	|
+logs/heart_4gpu_512batch_2epoch.txt:|  [Strategy]DDPStrategy.backward                           	|  0.065738       	|  24376          	|  1602.4         	|  47.726         	|
+logs/heart_1gpu_128batch_1epoch.txt:|  [Strategy]DDPStrategy.training_step                      	|  0.0057149      	|  12188          	|  69.653         	|  12.015         	|
+logs/heart_1gpu_256batch_1epoch.txt:|  [Strategy]DDPStrategy.training_step                      	|  0.0074286      	|  6094           	|  45.27          	|  6.4715         	|
+logs/heart_2gpu_128batch_1epoch.txt:|  [Strategy]DDPStrategy.training_step                      	|  0.0058719      	|  12188          	|  71.567         	|  6.2482         	|
+logs/heart_4gpu_128batch_1epoch.txt:|  [Strategy]DDPStrategy.training_step                      	|  0.0074584      	|  12188          	|  90.903         	|  5.77           	|
+logs/heart_4gpu_512batch_1epoch.txt:|  [Strategy]DDPStrategy.training_step                      	|  0.011346       	|  3047           	|  34.572         	|  3.2525         	|
+logs/heart_4gpu_512batch_2epoch.txt:|  [Strategy]DDPStrategy.training_step                      	|  0.0067141      	|  24376          	|  163.66         	|  4.8744         	|
