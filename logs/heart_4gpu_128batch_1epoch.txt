@@ -1,0 +1,189 @@
+/home/ubuntu/c2bb6f62173fea060764256030b59aeb/venv/lib/python3.9/site-packages/scvi/_settings.py:63: UserWarning: Since v1.0.0, scvi-tools no longer uses a random seed by default. Run `scvi.settings.seed = 0` to reproduce results from previous versions.
+  self.seed = seed
+/home/ubuntu/c2bb6f62173fea060764256030b59aeb/venv/lib/python3.9/site-packages/scvi/_settings.py:70: UserWarning: Setting `dl_pin_memory_gpu_training` is deprecated in v1.0 and will be removed in v1.1. Please pass in `pin_memory` to the data loaders instead.
+  self.dl_pin_memory_gpu_training = (
+Global seed set to 0
+Process 20391 handling partition 1 of 1, index range=0:1559973, soma_joinid range=11773743:53683467, 1559973
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Global seed set to 0
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+/home/ubuntu/c2bb6f62173fea060764256030b59aeb/venv/lib/python3.9/site-packages/scvi/_settings.py:63: UserWarning: Since v1.0.0, scvi-tools no longer uses a random seed by default. Run `scvi.settings.seed = 0` to reproduce results from previous versions.
+  self.seed = seed
+/home/ubuntu/c2bb6f62173fea060764256030b59aeb/venv/lib/python3.9/site-packages/scvi/_settings.py:70: UserWarning: Setting `dl_pin_memory_gpu_training` is deprecated in v1.0 and will be removed in v1.1. Please pass in `pin_memory` to the data loaders instead.
+  self.dl_pin_memory_gpu_training = (
+/home/ubuntu/c2bb6f62173fea060764256030b59aeb/venv/lib/python3.9/site-packages/scvi/_settings.py:63: UserWarning: Since v1.0.0, scvi-tools no longer uses a random seed by default. Run `scvi.settings.seed = 0` to reproduce results from previous versions.
+  self.seed = seed
+/home/ubuntu/c2bb6f62173fea060764256030b59aeb/venv/lib/python3.9/site-packages/scvi/_settings.py:70: UserWarning: Setting `dl_pin_memory_gpu_training` is deprecated in v1.0 and will be removed in v1.1. Please pass in `pin_memory` to the data loaders instead.
+  self.dl_pin_memory_gpu_training = (
+/home/ubuntu/c2bb6f62173fea060764256030b59aeb/venv/lib/python3.9/site-packages/scvi/_settings.py:63: UserWarning: Since v1.0.0, scvi-tools no longer uses a random seed by default. Run `scvi.settings.seed = 0` to reproduce results from previous versions.
+  self.seed = seed
+/home/ubuntu/c2bb6f62173fea060764256030b59aeb/venv/lib/python3.9/site-packages/scvi/_settings.py:70: UserWarning: Setting `dl_pin_memory_gpu_training` is deprecated in v1.0 and will be removed in v1.1. Please pass in `pin_memory` to the data loaders instead.
+  self.dl_pin_memory_gpu_training = (
+[rank: 1] Global seed set to 0
+[rank: 2] Global seed set to 0
+[rank: 3] Global seed set to 0
+Process 21382 handling partition 1 of 1, index range=0:1559973, soma_joinid range=11773743:53683467, 1559973
+Process 21381 handling partition 1 of 1, index range=0:1559973, soma_joinid range=11773743:53683467, 1559973
+Process 21433 handling partition 1 of 1, index range=0:1559973, soma_joinid range=11773743:53683467, 1559973
+[rank: 2] Global seed set to 0
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/4
+[rank: 1] Global seed set to 0
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/4
+[rank: 3] Global seed set to 0
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+
+You are using a CUDA device ('NVIDIA A10G') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+obs_filter="tissue_general == 'heart' and is_primary_data == True"
+devices='4'
+batch_size='128'
+max_epochs='1'
+training data shape=(1559973, 60664)
+{'strategy': 'ddp_find_unused_parameters_true', 'profiler': 'simple', 'callbacks': [<lightning.pytorch.callbacks.device_stats_monitor.DeviceStatsMonitor object at 0x7f616c5f8250>]}
+Training:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 1/1:   0%|          | 0/1 [00:00<?, ?it/s]Retrieving next TileDB-SOMA batch...
+Retrieving next TileDB-SOMA batch...
+Retrieving next TileDB-SOMA batch...
+Retrieving next TileDB-SOMA batch...
+Retrieved batch: shape=(1559973, 60664), cum_stats: n_soma_batches=1, n_obs=1559973, nnz=2309748061, elapsed=0:02:18
+Retrieved batch: shape=(1559973, 60664), cum_stats: n_soma_batches=1, n_obs=1559973, nnz=2309748061, elapsed=0:02:18
+Retrieved batch: shape=(1559973, 60664), cum_stats: n_soma_batches=1, n_obs=1559973, nnz=2309748061, elapsed=0:02:19
+Retrieved batch: shape=(1559973, 60664), cum_stats: n_soma_batches=1, n_obs=1559973, nnz=2309748061, elapsed=0:02:20
+/home/ubuntu/c2bb6f62173fea060764256030b59aeb/venv/lib/python3.9/site-packages/lightning/pytorch/utilities/data.py:76: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Retrieving next TileDB-SOMA batch...
+Retrieving next TileDB-SOMA batch...
+Retrieving next TileDB-SOMA batch...
+Retrieving next TileDB-SOMA batch...
+Retrieving next TileDB-SOMA batch...
+Retrieving next TileDB-SOMA batch...
+Retrieving next TileDB-SOMA batch...
+Retrieving next TileDB-SOMA batch...
+Epoch 1/1: 100%|██████████| 1/1 [26:08<00:00, 1568.32s/it]/home/ubuntu/c2bb6f62173fea060764256030b59aeb/venv/lib/python3.9/site-packages/lightning/pytorch/trainer/connectors/logger_connector/result.py:432: PossibleUserWarning: It is recommended to use `self.log('train_loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+  warning_cache.warn(
+Epoch 1/1: 100%|██████████| 1/1 [26:08<00:00, 1568.32s/it, v_num=1, train_loss_step=5.12e+3, train_loss_epoch=1.08e+4]`Trainer.fit` stopped: `max_epochs=1` reached.
+Epoch 1/1: 100%|██████████| 1/1 [26:08<00:00, 1568.35s/it, v_num=1, train_loss_step=5.12e+3, train_loss_epoch=1.08e+4]FIT Profiler Report
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Action                                                   	|  Mean duration (s)	|  Num calls      	|  Total time (s) 	|  Percentage %   	|
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Total                                                    	|  -              	|  365676         	|  1575.4         	|  100 %          	|
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  run_training_epoch                                       	|  1568.3         	|  1              	|  1568.3         	|  99.548         	|
+|  run_training_batch                                       	|  0.075575       	|  12188          	|  921.11         	|  58.467         	|
+|  [LightningModule]TrainingPlan.optimizer_step             	|  0.075443       	|  12188          	|  919.5          	|  58.365         	|
+|  [Strategy]DDPStrategy.backward                           	|  0.066684       	|  12188          	|  812.75         	|  51.588         	|
+|  [_TrainingEpochLoop].train_dataloader_next               	|  0.038853       	|  12189          	|  473.58         	|  30.06          	|
+|  [Strategy]DDPStrategy.training_step                      	|  0.0074584      	|  12188          	|  90.903         	|  5.77           	|
+|  [Strategy]DDPStrategy.batch_to_device                    	|  0.0040463      	|  12188          	|  49.317         	|  3.1303         	|
+|  [LightningModule]TrainingPlan.transfer_batch_to_device   	|  0.0038895      	|  12188          	|  47.406         	|  3.009          	|
+|  [Callback]DeviceStatsMonitor.on_train_batch_end          	|  0.0032847      	|  12188          	|  40.033         	|  2.5411         	|
+|  [Callback]DeviceStatsMonitor.on_train_batch_start        	|  0.0026407      	|  12188          	|  32.185         	|  2.0429         	|
+|  [LightningModule]TrainingPlan.optimizer_zero_grad        	|  9.8846e-05     	|  12188          	|  1.2047         	|  0.07647        	|
+|  [LightningModule]TrainingPlan.configure_gradient_clipping	|  2.5948e-05     	|  12188          	|  0.31625        	|  0.020074       	|
+|  [Callback]DeviceStatsMonitor.on_after_backward           	|  5.2039e-06     	|  12188          	|  0.063426       	|  0.0040259      	|
+|  [LightningModule]TrainingPlan.on_before_batch_transfer   	|  4.3632e-06     	|  12188          	|  0.053179       	|  0.0033755      	|
+|  [Callback]DeviceStatsMonitor.on_before_zero_grad         	|  3.464e-06      	|  12188          	|  0.042219       	|  0.0026798      	|
+|  [Callback]ProgressBar.on_train_batch_start               	|  2.9562e-06     	|  12188          	|  0.036031       	|  0.002287       	|
+|  [Callback]ProgressBar.on_train_batch_end                 	|  2.7092e-06     	|  12188          	|  0.03302        	|  0.0020959      	|
+|  [Callback]DeviceStatsMonitor.on_before_backward          	|  2.1656e-06     	|  12188          	|  0.026394       	|  0.0016753      	|
+|  [Callback]DeviceStatsMonitor.on_before_optimizer_step    	|  2.0787e-06     	|  12188          	|  0.025335       	|  0.0016082      	|
+|  [LightningModule]TrainingPlan.on_after_batch_transfer    	|  1.8654e-06     	|  12188          	|  0.022735       	|  0.0014431      	|
+|  [Callback]ProgressBar.on_before_zero_grad                	|  1.7607e-06     	|  12188          	|  0.02146        	|  0.0013622      	|
+|  [Callback]ProgressBar.on_train_epoch_end                 	|  0.019104       	|  1              	|  0.019104       	|  0.0012126      	|
+|  [Callback]ProgressBar.on_after_backward                  	|  1.52e-06       	|  12188          	|  0.018526       	|  0.0011759      	|
+|  [LightningModule]TrainingPlan.on_before_zero_grad        	|  1.5084e-06     	|  12188          	|  0.018384       	|  0.0011669      	|
+|  [LightningModule]TrainingPlan.on_before_backward         	|  1.5029e-06     	|  12188          	|  0.018317       	|  0.0011627      	|
+|  [LightningModule]TrainingPlan.on_train_batch_start       	|  1.4881e-06     	|  12188          	|  0.018137       	|  0.0011512      	|
+|  [LightningModule]TrainingPlan.on_after_backward          	|  1.4175e-06     	|  12188          	|  0.017277       	|  0.0010966      	|
+|  [Callback]ProgressBar.on_before_optimizer_step           	|  1.3929e-06     	|  12188          	|  0.016976       	|  0.0010775      	|
+|  [Callback]ProgressBar.on_before_backward                 	|  1.3701e-06     	|  12188          	|  0.016699       	|  0.00106        	|
+|  [LightningModule]TrainingPlan.on_train_batch_end         	|  1.2954e-06     	|  12188          	|  0.015789       	|  0.0010022      	|
+|  [Strategy]DDPStrategy.on_train_batch_start               	|  1.2267e-06     	|  12188          	|  0.014951       	|  0.00094899     	|
+|  [LightningModule]TrainingPlan.on_before_optimizer_step   	|  1.065e-06      	|  12188          	|  0.01298        	|  0.00082392     	|
+|  [Callback]ProgressBar.on_train_start                     	|  0.0007247      	|  1              	|  0.0007247      	|  4.6e-05        	|
+|  [LightningDataModule]CensusDataModule.train_dataloader   	|  0.00039285     	|  1              	|  0.00039285     	|  2.4936e-05     	|
+|  [LightningModule]TrainingPlan.configure_optimizers       	|  0.00018057     	|  1              	|  0.00018057     	|  1.1462e-05     	|
+|  [Callback]ProgressBar.on_train_end                       	|  0.00011878     	|  1              	|  0.00011878     	|  7.5396e-06     	|
+|  [Callback]ProgressBar.on_train_epoch_start               	|  7.1061e-05     	|  1              	|  7.1061e-05     	|  4.5105e-06     	|
+|  [Callback]DeviceStatsMonitor.setup                       	|  1.683e-05      	|  1              	|  1.683e-05      	|  1.0683e-06     	|
+|  [Callback]ProgressBar.setup                              	|  1.255e-05      	|  1              	|  1.255e-05      	|  7.966e-07      	|
+|  [LightningModule]TrainingPlan.configure_callbacks        	|  8.51e-06       	|  1              	|  8.51e-06       	|  5.4017e-07     	|
+|  [LightningDataModule]CensusDataModule.setup              	|  4.52e-06       	|  1              	|  4.52e-06       	|  2.869e-07      	|
+|  [Callback]DeviceStatsMonitor.on_fit_end                  	|  4.03e-06       	|  1              	|  4.03e-06       	|  2.558e-07      	|
+|  [Callback]DeviceStatsMonitor.on_train_start              	|  3.45e-06       	|  1              	|  3.45e-06       	|  2.1899e-07     	|
+|  [LightningDataModule]CensusDataModule.prepare_data       	|  3.34e-06       	|  1              	|  3.34e-06       	|  2.12e-07       	|
+|  [Callback]DeviceStatsMonitor.on_train_end                	|  3.18e-06       	|  1              	|  3.18e-06       	|  2.0185e-07     	|
+|  [Callback]DeviceStatsMonitor.on_fit_start                	|  2.58e-06       	|  1              	|  2.58e-06       	|  1.6376e-07     	|
+|  [Callback]DeviceStatsMonitor.on_train_epoch_end          	|  2.32e-06       	|  1              	|  2.32e-06       	|  1.4726e-07     	|
+|  [LightningDataModule]CensusDataModule.teardown           	|  2.09e-06       	|  1              	|  2.09e-06       	|  1.3266e-07     	|
+|  [Callback]DeviceStatsMonitor.on_train_epoch_start        	|  2.01e-06       	|  1              	|  2.01e-06       	|  1.2758e-07     	|
+|  [Callback]DeviceStatsMonitor.teardown                    	|  1.99e-06       	|  1              	|  1.99e-06       	|  1.2631e-07     	|
+|  [LightningModule]TrainingPlan.configure_sharded_model    	|  1.92e-06       	|  1              	|  1.92e-06       	|  1.2187e-07     	|
+|  [LightningModule]TrainingPlan.on_fit_start               	|  1.92e-06       	|  1              	|  1.92e-06       	|  1.2187e-07     	|
+|  [LightningModule]TrainingPlan.on_train_epoch_end         	|  1.59e-06       	|  1              	|  1.59e-06       	|  1.0092e-07     	|
+|  [LightningModule]TrainingPlan.setup                      	|  1.53e-06       	|  1              	|  1.53e-06       	|  9.7116e-08     	|
+|  [Callback]ProgressBar.on_fit_start                       	|  1.48e-06       	|  1              	|  1.48e-06       	|  9.3942e-08     	|
+|  [LightningModule]TrainingPlan.on_train_start             	|  1.41e-06       	|  1              	|  1.41e-06       	|  8.9499e-08     	|
+|  [Callback]ProgressBar.teardown                           	|  1.34e-06       	|  1              	|  1.34e-06       	|  8.5055e-08     	|
+|  [LightningModule]TrainingPlan.on_train_end               	|  1.3e-06        	|  1              	|  1.3e-06        	|  8.2517e-08     	|
+|  [Callback]ProgressBar.on_fit_end                         	|  1.24e-06       	|  1              	|  1.24e-06       	|  7.8708e-08     	|
+|  [LightningModule]TrainingPlan.on_train_epoch_start       	|  1.23e-06       	|  1              	|  1.23e-06       	|  7.8073e-08     	|
+|  [LightningModule]TrainingPlan.on_fit_end                 	|  1.21e-06       	|  1              	|  1.21e-06       	|  7.6804e-08     	|
+|  [Strategy]DDPStrategy.on_train_start                     	|  1.11e-06       	|  1              	|  1.11e-06       	|  7.0456e-08     	|
+|  [LightningModule]TrainingPlan.prepare_data               	|  1.11e-06       	|  1              	|  1.11e-06       	|  7.0456e-08     	|
+|  [Strategy]DDPStrategy.on_train_end                       	|  1.08e-06       	|  1              	|  1.08e-06       	|  6.8552e-08     	|
+|  [LightningModule]TrainingPlan.teardown                   	|  8.7e-07        	|  1              	|  8.7e-07        	|  5.5223e-08     	|
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	Command being timed: "python census_scvi.py tissue_general == 'heart' and is_primary_data == True 4 128 1"
+	User time (seconds): 5629.52
+	System time (seconds): 405.62
+	Percent of CPU this job got: 380%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 26:25.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 49388112
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 597530
+	Minor (reclaiming a frame) page faults: 22118953
+	Voluntary context switches: 1636888
+	Involuntary context switches: 437992
+	Swaps: 0
+	File system inputs: 26793704
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+obs_filter="tissue_general == 'heart' and is_primary_data == True"
+devices='4'
+batch_size='128'
+max_epochs='1'
+training data shape=(1559973, 60664)
+{'strategy': 'ddp_find_unused_parameters_true', 'profiler': 'simple', 'callbacks': [<lightning.pytorch.callbacks.device_stats_monitor.DeviceStatsMonitor object at 0x7f6a907bdcd0>]}
+obs_filter="tissue_general == 'heart' and is_primary_data == True"
+devices='4'
+batch_size='128'
+max_epochs='1'
+training data shape=(1559973, 60664)
+{'strategy': 'ddp_find_unused_parameters_true', 'profiler': 'simple', 'callbacks': [<lightning.pytorch.callbacks.device_stats_monitor.DeviceStatsMonitor object at 0x7fbbf41cb100>]}
+obs_filter="tissue_general == 'heart' and is_primary_data == True"
+devices='4'
+batch_size='128'
+max_epochs='1'
+training data shape=(1559973, 60664)
+{'strategy': 'ddp_find_unused_parameters_true', 'profiler': 'simple', 'callbacks': [<lightning.pytorch.callbacks.device_stats_monitor.DeviceStatsMonitor object at 0x7fc4bc295cd0>]}
