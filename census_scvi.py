@@ -7,12 +7,12 @@ import torchdata
 from cellxgene_census.experimental.ml import ExperimentDataPipe
 from scvi import REGISTRY_KEYS
 from scvi.model import SCVI
+import torch.distributed as dist
 from torch.utils.data import DataLoader
 from lightning.pytorch.callbacks import DeviceStatsMonitor
 
 scvi.settings.seed = 0
 N_GENES = 60664
-
 
 class CensusDataLoader(DataLoader):
     
@@ -22,6 +22,7 @@ class CensusDataLoader(DataLoader):
     def __iter__(self):
         for tensors in super().__iter__():
             x, _ = tensors
+            x = x.float() # avoid "RuntimeError: mat1 and mat2 must have the same dtype", due to 32-bit vs 64-bit floats
             # print(x.shape)
             yield {
                 REGISTRY_KEYS.X_KEY: x,
@@ -122,6 +123,10 @@ def main():
     print(f"{obs_filter=}\n{devices=}\n{batch_size=}\n{max_epochs=}")
 
     # obs_filter = "tissue_general == 'tongue' and is_primary_data == True"
+
+    from cellxgene_census.experimental.ml.pytorch import pytorch_logger
+    import logging
+    pytorch_logger.setLevel(logging.DEBUG)
     
     # census = cellxgene_census.open_soma()
     census = cellxgene_census.open_soma(uri='/mnt/census')
@@ -132,7 +137,7 @@ def main():
         X_name="raw",
         obs_query=somacore.AxisQuery(value_filter=obs_filter),
         batch_size=int(batch_size),
-#        soma_buffer_bytes=2**20,
+        soma_buffer_bytes=2**24,
     )
     print(f"training data shape={dp.shape}")
 
