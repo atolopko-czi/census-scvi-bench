@@ -1,7 +1,5 @@
-scvi-tools
-lightning
-cellxgene-census
-fastapi==0.96.0
-urllib3<1.27,>=1.25.4
-numpy<1.24,>=1.21
-
+cellxgene-census[experimental]==1.4.0
+lightning==2.0.6
+scvi-tools==1.0.2
+fastapi==0.100.1
+click==7.1.2

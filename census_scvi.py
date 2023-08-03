@@ -1,28 +1,39 @@
+import logging
+
 import cellxgene_census
+import click
 import lightning.pytorch as pl
 import scvi
 import somacore
 import torch
+import torch.distributed as dist
 import torchdata
 from cellxgene_census.experimental.ml import ExperimentDataPipe
+from lightning.pytorch.callbacks import DeviceStatsMonitor
 from scvi import REGISTRY_KEYS
 from scvi.model import SCVI
-import torch.distributed as dist
 from torch.utils.data import DataLoader
-from lightning.pytorch.callbacks import DeviceStatsMonitor
+
+
+from cellxgene_census.experimental.ml.pytorch import pytorch_logger
 
 scvi.settings.seed = 0
 N_GENES = 60664
+
+logger = logging.getLogger("census_scvi")
+logger.setLevel(logging.INFO)
+
 
 class CensusDataLoader(DataLoader):
     
     def __init__(self, datapipe: ExperimentDataPipe, *args, **kwargs):
         super().__init__(datapipe, *args, **kwargs)
+        pytorch_logger.info(f"pytorch dist rank={dist.get_rank()}")
 
     def __iter__(self):
         for tensors in super().__iter__():
             x, _ = tensors
-            x = x.float() # avoid "RuntimeError: mat1 and mat2 must have the same dtype", due to 32-bit vs 64-bit floats
+            x = x.float()  # avoid "RuntimeError: mat1 and mat2 must have the same dtype", due to 32-bit vs 64-bit floats
             # print(x.shape)
             yield {
                 REGISTRY_KEYS.X_KEY: x,
@@ -115,29 +126,38 @@ class CensusDataModule(pl.LightningDataModule):
     def test_dataloader(self):
         pass
 
-    
-import sys
 
-def main():
-    obs_filter, devices, batch_size, max_epochs = sys.argv[1:]
-    print(f"{obs_filter=}\n{devices=}\n{batch_size=}\n{max_epochs=}")
-
-    # obs_filter = "tissue_general == 'tongue' and is_primary_data == True"
-
-    from cellxgene_census.experimental.ml.pytorch import pytorch_logger
-    import logging
+@click.option("--census-uri", default=None, help="URI to census tiledb")
+@click.option("--organism", default="homo_sapiens", help="Organism to use")
+@click.option("--measurement-name", default="RNA")
+@click.option("--layer-name", default="raw", help="Layer name to use")
+@click.option("--obs-value-filter", default=None, type=str, help="Obs value filter to use")
+@click.option("--torch-batch-size", default=128)
+@click.option("--soma-buffer-bytes", type=int)
+@click.option("--torch-devices", type=str, default=None)
+@click.option("--max-epochs", default=1)
+@click.command()
+def main(census_uri,
+         organism,
+         measurement_name,
+         layer_name,
+         obs_value_filter,
+         torch_batch_size,
+         soma_buffer_bytes,
+         torch_devices,
+         max_epochs
+         ) -> None:
     pytorch_logger.setLevel(logging.DEBUG)
-    
-    # census = cellxgene_census.open_soma()
-    census = cellxgene_census.open_soma(uri='/mnt/census')
+
+    census = cellxgene_census.open_soma(uri=census_uri) if census_uri else cellxgene_census.open_soma()
 
     dp = ExperimentDataPipe(
-        census["census_data"]["homo_sapiens"],
-        measurement_name="RNA",
-        X_name="raw",
-        obs_query=somacore.AxisQuery(value_filter=obs_filter),
-        batch_size=int(batch_size),
-        soma_buffer_bytes=2**24,
+        census["census_data"][organism],
+        measurement_name=measurement_name,
+        X_name=layer_name,
+        obs_query=somacore.AxisQuery(value_filter=obs_value_filter),
+        batch_size=int(torch_batch_size),
+        soma_buffer_bytes=soma_buffer_bytes,
     )
     print(f"training data shape={dp.shape}")
 
@@ -149,7 +169,8 @@ def main():
     shuffle_dp = dp # .shuffle()
     model = CensusSCVI(shuffle_dp)
 
-    model.train(max_epochs=int(max_epochs), accelerator="gpu", devices=int(devices), strategy="ddp_find_unused_parameters_true",
+    model.train(max_epochs=int(max_epochs), accelerator="gpu" if torch_devices else "cpu",
+                devices=torch_devices if torch_devices else 1, strategy="ddp_find_unused_parameters_true",
                 profiler="simple", callbacks=[DeviceStatsMonitor()],
                 # for iterable datasets
                 # see https://pytorch-lightning.readthedocs.io/en/1.7.7/guides/data.html#iterable-datasets and
