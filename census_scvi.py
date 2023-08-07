@@ -28,7 +28,8 @@ class CensusDataLoader(DataLoader):
     
     def __init__(self, datapipe: ExperimentDataPipe, *args, **kwargs):
         super().__init__(datapipe, *args, **kwargs)
-        pytorch_logger.info(f"pytorch dist rank={dist.get_rank()}")
+        pytorch_logger.setLevel(logging.DEBUG)
+        pytorch_logger.debug(f"pytorch dist rank={dist.get_rank()}, data shape={datapipe.shape}")
 
     def __iter__(self):
         for tensors in super().__iter__():
