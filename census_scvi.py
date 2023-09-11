@@ -135,6 +135,7 @@ class CensusDataModule(pl.LightningDataModule):
 @click.option("--obs-value-filter", default=None, type=str, help="Obs value filter to use")
 @click.option("--torch-batch-size", default=128)
 @click.option("--soma-buffer-bytes", type=int)
+@click.option("--use-eager-fetch/--no-use-eager-fetch", default=True)
 @click.option("--torch-devices", type=str, default=None)
 @click.option("--max-epochs", default=1)
 @click.command()
@@ -145,6 +146,7 @@ def main(census_uri,
          obs_value_filter,
          torch_batch_size,
          soma_buffer_bytes,
+         use_eager_fetch,
          torch_devices,
          max_epochs
          ) -> None:
@@ -159,6 +161,7 @@ def main(census_uri,
         obs_query=somacore.AxisQuery(value_filter=obs_value_filter),
         batch_size=int(torch_batch_size),
         soma_buffer_bytes=soma_buffer_bytes,
+        use_eager_fetch=use_eager_fetch
     )
     print(f"training data shape={dp.shape}")
 
