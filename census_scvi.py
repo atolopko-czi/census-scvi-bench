@@ -13,12 +13,12 @@ from lightning.pytorch.callbacks import DeviceStatsMonitor
 from scvi import REGISTRY_KEYS
 from scvi.model import SCVI
 from torch.utils.data import DataLoader
+import pandas as pd
 
 
 from cellxgene_census.experimental.ml.pytorch import pytorch_logger
 
 scvi.settings.seed = 0
-N_GENES = 60664
 
 logger = logging.getLogger("census_scvi")
 logger.setLevel(logging.INFO)
@@ -53,6 +53,7 @@ class CensusSCVI(SCVI):
         n_hidden: int = 128,
         n_latent: int = 10,
         n_layers: int = 1,
+        n_genes: int = 60664,
         dropout_rate: float = 0.1,
         dispersion: str = "gene",
         gene_likelihood: str = "zinb",
@@ -60,7 +61,7 @@ class CensusSCVI(SCVI):
         **model_kwargs,
     ):
         self.module = self._module_cls(
-            N_GENES,
+            n_genes,
             n_hidden=n_hidden,
             n_latent=n_latent,
             n_layers=n_layers,
@@ -133,6 +134,7 @@ class CensusDataModule(pl.LightningDataModule):
 @click.option("--measurement-name", default="RNA")
 @click.option("--layer-name", default="raw", help="Layer name to use")
 @click.option("--obs-value-filter", default=None, type=str, help="Obs value filter to use")
+@click.option("--var-soma-joinids-csv-file", default=None, type=str, help="File containing a list of var soma joinids")
 @click.option("--torch-batch-size", default=128)
 @click.option("--soma-buffer-bytes", type=int)
 @click.option("--use-eager-fetch/--no-use-eager-fetch", default=True)
@@ -144,6 +146,7 @@ def main(census_uri,
          measurement_name,
          layer_name,
          obs_value_filter,
+         var_soma_joinids_csv_file,
          torch_batch_size,
          soma_buffer_bytes,
          use_eager_fetch,
@@ -154,11 +157,19 @@ def main(census_uri,
 
     census = cellxgene_census.open_soma(uri=census_uri) if census_uri else cellxgene_census.open_soma()
 
+    if var_soma_joinids_csv_file:
+        var_soma_joinids = list(pd.read_csv(var_soma_joinids_csv_file).index)
+        n_genes = len(var_soma_joinids)
+    else:
+        n_genes = 60664 # TODO
+    print(f"gene count={n_genes}")
+
     dp = ExperimentDataPipe(
         census["census_data"][organism],
         measurement_name=measurement_name,
         X_name=layer_name,
         obs_query=somacore.AxisQuery(value_filter=obs_value_filter),
+        var_query=somacore.AxisQuery(coords=(var_soma_joinids,)),
         batch_size=int(torch_batch_size),
         soma_buffer_bytes=soma_buffer_bytes,
         use_eager_fetch=use_eager_fetch
@@ -171,7 +182,7 @@ def main(census_uri,
     # sys.exit(0)
     
     shuffle_dp = dp # .shuffle()
-    model = CensusSCVI(shuffle_dp)
+    model = CensusSCVI(shuffle_dp, n_genes=n_genes)
 
     model.train(max_epochs=int(max_epochs), accelerator="gpu" if torch_devices else "cpu",
                 devices=torch_devices if torch_devices else 1, strategy="ddp_find_unused_parameters_true",
