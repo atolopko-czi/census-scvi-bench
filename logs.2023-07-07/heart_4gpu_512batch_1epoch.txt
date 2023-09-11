@@ -1,0 +1,71 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2050, in try_parse
+    return packaging.version.Version(name)
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/_vendor/packaging/version.py", line 266, in __init__
+    raise InvalidVersion(f"Invalid version: '{version}'")
+pkg_resources.extern.packaging.version.InvalidVersion: Invalid version: '.dist-info'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/c2bb6f62173fea060764256030b59aeb/census_scvi.py", line 1, in <module>
+    import cellxgene_census
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/cellxgene_census/__init__.py", line 25, in <module>
+    from ._get_anndata import get_anndata
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/cellxgene_census/_get_anndata.py", line 12, in <module>
+    import tiledbsoma as soma
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/tiledbsoma/__init__.py", line 109, in <module>
+    from ._general_utilities import (
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/tiledbsoma/_general_utilities.py", line 13, in <module>
+    from pkg_resources import DistributionNotFound, get_distribution
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3260, in <module>
+    def _initialize_master_working_set():
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3234, in _call_aside
+    f(*args, **kwargs)
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3272, in _initialize_master_working_set
+    working_set = WorkingSet._build_master()
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/__init__.py", line 572, in _build_master
+    ws = cls()
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/__init__.py", line 565, in __init__
+    self.add_entry(entry)
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/__init__.py", line 621, in add_entry
+    for dist in find_distributions(entry, True):
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2092, in find_on_path
+    path_item_entries = _by_version_descending(filtered)
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2062, in _by_version_descending
+    return sorted(names, key=_by_version, reverse=True)
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2060, in _by_version
+    return [try_parse(part) for part in parts]
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2060, in <listcomp>
+    return [try_parse(part) for part in parts]
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2052, in try_parse
+    return packaging.version.Version('0')
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/_vendor/packaging/version.py", line 281, in __init__
+    self._key = _cmpkey(
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/pkg_resources/_vendor/packaging/version.py", line 459, in _cmpkey
+    reversed(list(itertools.dropwhile(lambda x: x == 0, reversed(release))))
+KeyboardInterrupt
+Command terminated by signal 2
+	Command being timed: "python census_scvi.py tissue_general == 'heart' and is_primary_data == True 4 512 1"
+	User time (seconds): 4.99
+	System time (seconds): 3.80
+	Percent of CPU this job got: 404%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 470356
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 59913
+	Voluntary context switches: 194
+	Involuntary context switches: 187
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

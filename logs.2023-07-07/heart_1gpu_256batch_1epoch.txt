@@ -1,0 +1,49 @@
+/home/ubuntu/venv/lib/python3.10/site-packages/scvi/_settings.py:63: UserWarning: Since v1.0.0, scvi-tools no longer uses a random seed by default. Run `scvi.settings.seed = 0` to reproduce results from previous versions.
+  self.seed = seed
+/home/ubuntu/venv/lib/python3.10/site-packages/scvi/_settings.py:70: UserWarning: Setting `dl_pin_memory_gpu_training` is deprecated in v1.0 and will be removed in v1.1. Please pass in `pin_memory` to the data loaders instead.
+  self.dl_pin_memory_gpu_training = (
+Global seed set to 0
+obs_filter="tissue_general == 'heart' and is_primary_data == True"
+devices='1'
+batch_size='256'
+max_epochs='1'
+Traceback (most recent call last):
+  File "/home/ubuntu/c2bb6f62173fea060764256030b59aeb/census_scvi.py", line 157, in <module>
+    main()
+  File "/home/ubuntu/c2bb6f62173fea060764256030b59aeb/census_scvi.py", line 127, in main
+    census = cellxgene_census.open_soma(uri='/mnt/census')
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/cellxgene_census/_open.py", line 126, in open_soma
+    return _open_soma({"uri": uri, "s3_region": None}, context)
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/cellxgene_census/_open.py", line 39, in _open_soma
+    return soma.open(locator["uri"], mode="r", soma_type=soma.Collection, context=context)
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/tiledbsoma/_factory.py", line 114, in open
+    obj = _open_internal(_tdb_handles.open, uri, mode, context, tiledb_timestamp)
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/tiledbsoma/_factory.py", line 143, in _open_internal
+    handle = opener(uri, mode, context, timestamp)
+  File "/home/ubuntu/venv/lib/python3.10/site-packages/tiledbsoma/_tdb_handles.py", line 50, in open
+    raise DoesNotExistError(f"{uri!r} does not exist")
+tiledbsoma._exception.DoesNotExistError: '/mnt/census' does not exist
+Command exited with non-zero status 1
+	Command being timed: "python census_scvi.py tissue_general == 'heart' and is_primary_data == True 1 256 1"
+	User time (seconds): 7.82
+	System time (seconds): 4.06
+	Percent of CPU this job got: 226%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.25
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 730880
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 99904
+	Voluntary context switches: 458
+	Involuntary context switches: 127
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

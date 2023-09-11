@@ -1,0 +1,1104 @@
+/home/ubuntu/venv/lib/python3.10/site-packages/scvi/_settings.py:63: UserWarning: Since v1.0.0, scvi-tools no longer uses a random seed by default. Run `scvi.settings.seed = 0` to reproduce results from previous versions.
+  self.seed = seed
+/home/ubuntu/venv/lib/python3.10/site-packages/scvi/_settings.py:70: UserWarning: Setting `dl_pin_memory_gpu_training` is deprecated in v1.0 and will be removed in v1.1. Please pass in `pin_memory` to the data loaders instead.
+  self.dl_pin_memory_gpu_training = (
+Global seed set to 0
+Initializing ExperimentDataPipe
+Initializing encoders
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Global seed set to 0
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+/home/ubuntu/venv/lib/python3.10/site-packages/scvi/_settings.py:63: UserWarning: Since v1.0.0, scvi-tools no longer uses a random seed by default. Run `scvi.settings.seed = 0` to reproduce results from previous versions.
+  self.seed = seed
+/home/ubuntu/venv/lib/python3.10/site-packages/scvi/_settings.py:70: UserWarning: Setting `dl_pin_memory_gpu_training` is deprecated in v1.0 and will be removed in v1.1. Please pass in `pin_memory` to the data loaders instead.
+  self.dl_pin_memory_gpu_training = (
+/home/ubuntu/venv/lib/python3.10/site-packages/scvi/_settings.py:63: UserWarning: Since v1.0.0, scvi-tools no longer uses a random seed by default. Run `scvi.settings.seed = 0` to reproduce results from previous versions.
+  self.seed = seed
+/home/ubuntu/venv/lib/python3.10/site-packages/scvi/_settings.py:70: UserWarning: Setting `dl_pin_memory_gpu_training` is deprecated in v1.0 and will be removed in v1.1. Please pass in `pin_memory` to the data loaders instead.
+  self.dl_pin_memory_gpu_training = (
+/home/ubuntu/venv/lib/python3.10/site-packages/scvi/_settings.py:63: UserWarning: Since v1.0.0, scvi-tools no longer uses a random seed by default. Run `scvi.settings.seed = 0` to reproduce results from previous versions.
+  self.seed = seed
+/home/ubuntu/venv/lib/python3.10/site-packages/scvi/_settings.py:70: UserWarning: Setting `dl_pin_memory_gpu_training` is deprecated in v1.0 and will be removed in v1.1. Please pass in `pin_memory` to the data loaders instead.
+  self.dl_pin_memory_gpu_training = (
+[rank: 3] Global seed set to 0
+[rank: 1] Global seed set to 0
+[rank: 2] Global seed set to 0
+Initializing ExperimentDataPipe
+Initializing ExperimentDataPipe
+Initializing ExperimentDataPipe
+Initializing encoders
+Initializing encoders
+Initializing encoders
+[rank: 2] Global seed set to 0
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/4
+[rank: 1] Global seed set to 0
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/4
+[rank: 3] Global seed set to 0
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+pytorch dist rank=0, data shape=(33364242, 60664)
+pytorch dist rank=1, data shape=(33364242, 60664)
+pytorch dist rank=3, data shape=(33364242, 60664)
+pytorch dist rank=2, data shape=(33364242, 60664)
+training data shape=(33364242, 60664)
+{'strategy': 'ddp_find_unused_parameters_true', 'profiler': 'simple', 'callbacks': [<lightning.pytorch.callbacks.device_stats_monitor.DeviceStatsMonitor object at 0x7f40bbf16800>]}
+Training:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 1/1:   0%|          | 0/1 [00:00<?, ?it/s]Process 2214 handling partition 1 of 4, index range=[0:8341061), soma_joinid range=[98567:16132390], partition_size=8341061
+Process 3323 handling partition 4 of 4, index range=[25023182:33364242), soma_joinid range=[44653939:56400872], partition_size=8341060
+Process 3321 handling partition 2 of 4, index range=[8341061:16682122), soma_joinid range=[16132391:33080737], partition_size=8341061
+Process 3322 handling partition 3 of 4, index range=[16682122:25023182), soma_joinid range=[33080738:44653938], partition_size=8341060
+Retrieving next SOMA batch...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Retrieving next SOMA batch...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=2515394560, vms=42673496064, shared=709304320, text=3043328, lib=0, data=11914567680, dirty=0, uss=1970446336, pss=2131238912, swap=0), svmem(total=200369070080, available=189258313728, percent=5.5, used=9166270464, free=189113561088, active=463921152, inactive=8791625728, buffers=78852096, cached=2010386432, shared=345878528, slab=348233728))
+gc: post=(pfullmem(rss=2479136768, vms=42958716928, shared=709304320, text=3043328, lib=0, data=12215971840, dirty=0, uss=1932754944, pss=2094163968, swap=0), svmem(total=200369070080, available=189267529728, percent=5.5, used=9157054464, free=189122777088, active=463921152, inactive=8785604608, buffers=78852096, cached=2010386432, shared=345878528, slab=348762112))
+gc:  pre=(pfullmem(rss=2549342208, vms=42749939712, shared=729853952, text=3043328, lib=0, data=11966328832, dirty=0, uss=1960648704, pss=2138532864, swap=0), svmem(total=200369070080, available=189235490816, percent=5.6, used=9189093376, free=189090738176, active=463921152, inactive=8822333440, buffers=78852096, cached=2010386432, shared=345878528, slab=348233728))
+gc: post=(pfullmem(rss=2511429632, vms=43009982464, shared=729915392, text=3043328, lib=0, data=12241784832, dirty=0, uss=1922326528, pss=2100236288, swap=0), svmem(total=200369070080, available=189266722816, percent=5.5, used=9157861376, free=189121970176, active=463921152, inactive=8787501056, buffers=78852096, cached=2010386432, shared=345878528, slab=349257728))
+Retrieving next SOMA batch...
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Retrieving next SOMA batch...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=2640408576, vms=42534539264, shared=706535424, text=3043328, lib=0, data=12404867072, dirty=0, uss=2073997312, pss=2240839680, swap=0), svmem(total=200369070080, available=189160710144, percent=5.6, used=9263874048, free=189015957504, active=463970304, inactive=8894545920, buffers=78852096, cached=2010386432, shared=345878528, slab=349192192))
+gc: post=(pfullmem(rss=2603184128, vms=42586128384, shared=706535424, text=3043328, lib=0, data=12464345088, dirty=0, uss=2036936704, pss=2203616256, swap=0), svmem(total=200369070080, available=188830642176, percent=5.8, used=9593921536, free=188671344640, active=475648000, inactive=9227812864, buffers=78852096, cached=2024951808, shared=345878528, slab=350363648))
+gc:  pre=(pfullmem(rss=2564026368, vms=42710654976, shared=730836992, text=3043328, lib=0, data=12138921984, dirty=0, uss=1995218944, pss=2166627328, swap=0), svmem(total=200369070080, available=189100478464, percent=5.6, used=9324093440, free=188950900736, active=463974400, inactive=8965414912, buffers=78852096, cached=2015223808, shared=345878528, slab=349585408))
+gc: post=(pfullmem(rss=2525601792, vms=42802843648, shared=730836992, text=3043328, lib=0, data=12230606848, dirty=0, uss=1957007360, pss=2128361472, swap=0), svmem(total=200369070080, available=188654223360, percent=5.8, used=9770340352, free=188494925824, active=475656192, inactive=9403604992, buffers=78852096, cached=2024951808, shared=345878528, slab=350785536))
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=431286817, elapsed=0:00:24
+Retrieved SOMA batch totals: n_soma_batches=1, n_obs=262144, nnz=431286817, elapsed=0:00:24
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=537677800, elapsed=0:00:28
+Retrieved SOMA batch totals: n_soma_batches=1, n_obs=262144, nnz=537677800, elapsed=0:00:28
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=598440583, elapsed=0:00:31
+Retrieved SOMA batch totals: n_soma_batches=1, n_obs=262144, nnz=598440583, elapsed=0:00:31
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=682858169, elapsed=0:00:33
+Retrieved SOMA batch totals: n_soma_batches=1, n_obs=262144, nnz=682858169, elapsed=0:00:33
+Retrieving next SOMA batch...
+/home/ubuntu/venv/lib/python3.10/site-packages/lightning/pytorch/utilities/data.py:76: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=270449000, elapsed=0:00:12
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=333265005, elapsed=0:00:17
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=691997507, elapsed=0:00:27
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1236594160, elapsed=0:00:43
+Running GC...
+Running GC...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=6279163904, vms=74259521536, shared=852590592, text=3043328, lib=0, data=30803243008, dirty=0, uss=5569904640, pss=5777904640, swap=0), svmem(total=200369070080, available=84291256320, percent=57.9, used=114121383936, free=76477984768, active=1188499456, inactive=120453734400, buffers=79532032, cached=9690169344, shared=345878528, slab=391704576))
+gc: post=(pfullmem(rss=6279131136, vms=73991086080, shared=852590592, text=3043328, lib=0, data=30540034048, dirty=0, uss=5569871872, pss=5777871872, swap=0), svmem(total=200369070080, available=84291575808, percent=57.9, used=114121064448, free=76478304256, active=1188499456, inactive=120453033984, buffers=79532032, cached=9690169344, shared=345878528, slab=391704576))
+Retrieved SOMA batch totals: n_soma_batches=2, n_obs=524288, nnz=931705588, elapsed=0:00:48
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=24592691200, vms=82964504576, shared=876191744, text=3043328, lib=0, data=39368724480, dirty=0, uss=23876349952, pss=24095190016, swap=0), svmem(total=200369070080, available=84291256320, percent=57.9, used=114121383936, free=76477984768, active=1188499456, inactive=120453734400, buffers=79532032, cached=9690169344, shared=345878528, slab=391704576))
+gc: post=(pfullmem(rss=5534945280, vms=72287838208, shared=876191744, text=3043328, lib=0, data=28848005120, dirty=0, uss=4803579904, pss=5022419968, swap=0), svmem(total=200369070080, available=149014736896, percent=25.6, used=49397817344, free=141185380352, active=1190047744, inactive=55756771328, buffers=79532032, cached=9706340352, shared=345878528, slab=391675904))
+Retrieved SOMA batch totals: n_soma_batches=2, n_obs=524288, nnz=808126800, elapsed=0:00:40
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=32486903808, vms=91297411072, shared=855683072, text=3043328, lib=0, data=47519715328, dirty=0, uss=31812571136, pss=32014713856, swap=0), svmem(total=200369070080, available=84291256320, percent=57.9, used=114121383936, free=76477984768, active=1188499456, inactive=120453734400, buffers=79532032, cached=9690169344, shared=345878528, slab=391704576))
+gc: post=(pfullmem(rss=8859910144, vms=78545149952, shared=855683072, text=3043328, lib=0, data=35034980352, dirty=0, uss=8172077056, pss=8374219776, swap=0), svmem(total=200369070080, available=156241100800, percent=22.0, used=42171551744, free=148379328512, active=1190047744, inactive=48557105152, buffers=79532032, cached=9738657792, shared=345878528, slab=391286784))
+Retrieved SOMA batch totals: n_soma_batches=2, n_obs=524288, nnz=1123284324, elapsed=0:00:51
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=51895427072, vms=111863296000, shared=877092864, text=3043328, lib=0, data=68023767040, dirty=0, uss=51200212992, pss=51411580928, swap=0), svmem(total=200369070080, available=84291575808, percent=57.9, used=114121064448, free=76478304256, active=1188499456, inactive=120452972544, buffers=79532032, cached=9690169344, shared=345878528, slab=391704576))
+gc: post=(pfullmem(rss=13280641024, vms=93206151168, shared=877092864, text=3043328, lib=0, data=49656033280, dirty=0, uss=12573331456, pss=12784699392, swap=0), svmem(total=200369070080, available=162785058816, percent=18.8, used=35629436928, free=154892468224, active=1194094592, inactive=42048245760, buffers=79532032, cached=9767632896, shared=345878528, slab=392597504))
+Retrieved SOMA batch totals: n_soma_batches=2, n_obs=524288, nnz=1919452329, elapsed=0:01:16
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=389107690, elapsed=0:00:20
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=356486761, elapsed=0:00:20
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=635427551, elapsed=0:00:29
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1402697816, elapsed=0:00:49
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=6287970304, vms=79414419456, shared=876191744, text=3043328, lib=0, data=36076752896, dirty=0, uss=5555757056, pss=5774597120, swap=0), svmem(total=200369070080, available=125466730496, percent=37.4, used=72942460928, free=113204248576, active=1605500928, inactive=83264811008, buffers=79613952, cached=14142746624, shared=345878528, slab=402538496))
+gc: post=(pfullmem(rss=6281007104, vms=76058976256, shared=876191744, text=3043328, lib=0, data=32752873472, dirty=0, uss=5548793856, pss=5767581696, swap=0), svmem(total=200369070080, available=125452255232, percent=37.4, used=72956936192, free=113189773312, active=1605517312, inactive=83284127744, buffers=79613952, cached=14142746624, shared=345878528, slab=404611072))
+Retrieved SOMA batch totals: n_soma_batches=3, n_obs=786432, nnz=1164613561, elapsed=0:01:00
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6760030208, vms=81220403200, shared=852590592, text=3043328, lib=0, data=37894561792, dirty=0, uss=6051287040, pss=6259287040, swap=0), svmem(total=200369070080, available=125466730496, percent=37.4, used=72942460928, free=113204248576, active=1605500928, inactive=83264811008, buffers=79613952, cached=14142746624, shared=345878528, slab=402538496))
+gc: post=(pfullmem(rss=6759858176, vms=79811117056, shared=852590592, text=3043328, lib=0, data=36512452608, dirty=0, uss=6051115008, pss=6259061760, swap=0), svmem(total=200369070080, available=125450190848, percent=37.4, used=72959000576, free=113187708928, active=1605517312, inactive=83287740416, buffers=79613952, cached=14142746624, shared=345878528, slab=403578880))
+Retrieved SOMA batch totals: n_soma_batches=3, n_obs=786432, nnz=1320813278, elapsed=0:01:08
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=20959383552, vms=90570641408, shared=855683072, text=3043328, lib=0, data=46969917440, dirty=0, uss=20276867072, pss=20479009792, swap=0), svmem(total=200369070080, available=125464453120, percent=37.4, used=72944738304, free=113201971200, active=1605500928, inactive=83264811008, buffers=79613952, cached=14142746624, shared=345878528, slab=404086784))
+gc: post=(pfullmem(rss=8429862912, vms=78498914304, shared=855683072, text=3043328, lib=0, data=35194425344, dirty=0, uss=7741796352, pss=7943939072, swap=0), svmem(total=200369070080, available=153635721216, percent=23.3, used=44773457920, free=141373227008, active=1605500928, inactive=55102218240, buffers=79613952, cached=14142771200, shared=345878528, slab=404082688))
+Retrieved SOMA batch totals: n_soma_batches=3, n_obs=786432, nnz=1758711875, elapsed=0:01:20
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=40064655360, vms=121235124224, shared=877092864, text=3043328, lib=0, data=77443416064, dirty=0, uss=39363710976, pss=39575026688, swap=0), svmem(total=200369070080, available=125437693952, percent=37.4, used=72971497472, free=113175212032, active=1605517312, inactive=83290836992, buffers=79613952, cached=14142746624, shared=345878528, slab=404611072))
+gc: post=(pfullmem(rss=14639484928, vms=106349813760, shared=877092864, text=3043328, lib=0, data=62858813440, dirty=0, uss=13931524096, pss=14142892032, swap=0), svmem(total=200369070080, available=159335616512, percent=20.5, used=39072940032, free=146937298944, active=1615261696, inactive=49528856576, buffers=79613952, cached=14279217152, shared=345878528, slab=405245952))
+Retrieved SOMA batch totals: n_soma_batches=3, n_obs=786432, nnz=3322150145, elapsed=0:02:05
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=425751710, elapsed=0:00:22
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=417937842, elapsed=0:00:22
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=654259083, elapsed=0:00:29
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1395444558, elapsed=0:00:51
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=6766030848, vms=81834635264, shared=855683072, text=3043328, lib=0, data=38712229888, dirty=0, uss=6074974208, pss=6277116928, swap=0), svmem(total=200369070080, available=114194186240, percent=43.0, used=84211441664, free=97518166016, active=2033360896, inactive=98472108032, buffers=79659008, cached=18559803392, shared=345878528, slab=416538624))
+gc: post=(pfullmem(rss=6765940736, vms=81096437760, shared=855683072, text=3043328, lib=0, data=37983539200, dirty=0, uss=6074880000, pss=6277022720, swap=0), svmem(total=200369070080, available=114193928192, percent=43.0, used=84211699712, free=97517907968, active=2033360896, inactive=98472108032, buffers=79659008, cached=18559803392, shared=345878528, slab=416538624))
+Retrieved SOMA batch totals: n_soma_batches=4, n_obs=1048576, nnz=2176649717, elapsed=0:01:42
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=16427544576, vms=88368492544, shared=852590592, text=3043328, lib=0, data=45063274496, dirty=0, uss=15724457984, pss=15932456960, swap=0), svmem(total=200369070080, available=114194186240, percent=43.0, used=84211441664, free=97518166016, active=2033360896, inactive=98472108032, buffers=79659008, cached=18559803392, shared=345878528, slab=416538624))
+gc: post=(pfullmem(rss=6914707456, vms=86363226112, shared=852590592, text=3043328, lib=0, data=43189264384, dirty=0, uss=6205382656, pss=6413381632, swap=0), svmem(total=200369070080, available=150609313792, percent=24.8, used=47796326400, free=133933305856, active=2033360896, inactive=62043856896, buffers=79659008, cached=18559778816, shared=345878528, slab=416600064))
+Retrieved SOMA batch totals: n_soma_batches=4, n_obs=1048576, nnz=1746564988, elapsed=0:01:30
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=21738668032, vms=91799605248, shared=876191744, text=3043328, lib=0, data=48457555968, dirty=0, uss=21010976768, pss=21229816832, swap=0), svmem(total=200369070080, available=114194186240, percent=43.0, used=84211441664, free=97518166016, active=2033360896, inactive=98472108032, buffers=79659008, cached=18559803392, shared=345878528, slab=416538624))
+gc: post=(pfullmem(rss=8638423040, vms=80331857920, shared=876191744, text=3043328, lib=0, data=37232648192, dirty=0, uss=7904550912, pss=8123390976, swap=0), svmem(total=200369070080, available=154940080128, percent=22.7, used=43465297920, free=138262261760, active=2033360896, inactive=57709895680, buffers=79659008, cached=18561851392, shared=345878528, slab=419520512))
+Retrieved SOMA batch totals: n_soma_batches=4, n_obs=1048576, nnz=1818872644, elapsed=0:01:29
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=40369442816, vms=124581384192, shared=877158400, text=3043328, lib=0, data=80986124288, dirty=0, uss=39664566272, pss=39875953664, swap=0), svmem(total=200369070080, available=114194186240, percent=43.0, used=84211441664, free=97518166016, active=2033360896, inactive=98472108032, buffers=79659008, cached=18559803392, shared=345878528, slab=416538624))
+gc: post=(pfullmem(rss=14608109568, vms=111100370944, shared=877158400, text=3043328, lib=0, data=67788365824, dirty=0, uss=13897043968, pss=14108431360, swap=0), svmem(total=200369070080, available=159500472320, percent=20.4, used=38902988800, free=142753255424, active=2036920320, inactive=53237899264, buffers=79659008, cached=18633166848, shared=345878528, slab=417570816))
+Retrieved SOMA batch totals: n_soma_batches=4, n_obs=1048576, nnz=4717594703, elapsed=0:02:56
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=427092533, elapsed=0:00:22
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=529740872, elapsed=0:00:26
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=569223012, elapsed=0:00:27
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1351407946, elapsed=0:00:49
+Running GC...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=6866497536, vms=86477565952, shared=855683072, text=3043328, lib=0, data=43476799488, dirty=0, uss=6175502336, pss=6377645056, swap=0), svmem(total=200369070080, available=120988041216, percent=39.6, used=77412216832, free=99883196416, active=2471727104, inactive=95626375168, buffers=79716352, cached=22993940480, shared=345878528, slab=428244992))
+gc: post=(pfullmem(rss=6865735680, vms=80370659328, shared=855683072, text=3043328, lib=0, data=37467414528, dirty=0, uss=6174740480, pss=6376880128, swap=0), svmem(total=200369070080, available=120991248384, percent=39.6, used=77409009664, free=99886403584, active=2471727104, inactive=95636180992, buffers=79716352, cached=22993940480, shared=345878528, slab=428244992))
+Retrieved SOMA batch totals: n_soma_batches=5, n_obs=1310720, nnz=2603742250, elapsed=0:02:04
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=12526256128, vms=83466842112, shared=876773376, text=3043328, lib=0, data=40538198016, dirty=0, uss=11793682432, pss=12012522496, swap=0), svmem(total=200369070080, available=120988041216, percent=39.6, used=77412216832, free=99883196416, active=2471727104, inactive=95626375168, buffers=79716352, cached=22993940480, shared=345878528, slab=428244992))
+gc: post=(pfullmem(rss=12526120960, vms=82325991424, shared=876773376, text=3043328, lib=0, data=39421394944, dirty=0, uss=11793543168, pss=12012329984, swap=0), svmem(total=200369070080, available=121686839296, percent=39.3, used=76713418752, free=100581994496, active=2471727104, inactive=94927872000, buffers=79716352, cached=22993940480, shared=345878528, slab=428785664))
+Retrieved SOMA batch totals: n_soma_batches=5, n_obs=1310720, nnz=2348613516, elapsed=0:01:55
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=19964825600, vms=99389648896, shared=852590592, text=3043328, lib=0, data=56190205952, dirty=0, uss=19263221760, pss=19471220736, swap=0), svmem(total=200369070080, available=120988041216, percent=39.6, used=77412216832, free=99883196416, active=2471727104, inactive=95626375168, buffers=79716352, cached=22993940480, shared=345878528, slab=428244992))
+gc: post=(pfullmem(rss=8072642560, vms=88526012416, shared=852590592, text=3043328, lib=0, data=45526233088, dirty=0, uss=7363489792, pss=7571488768, swap=0), svmem(total=200369070080, available=151736582144, percent=24.3, used=46663696384, free=130631757824, active=2471727104, inactive=64895868928, buffers=79716352, cached=22993899520, shared=345878528, slab=428171264))
+Retrieved SOMA batch totals: n_soma_batches=5, n_obs=1310720, nnz=2315788000, elapsed=0:01:57
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=39112364032, vms=133603876864, shared=877158400, text=3043328, lib=0, data=90170929152, dirty=0, uss=38410764288, pss=38622151680, swap=0), svmem(total=200369070080, available=120999985152, percent=39.6, used=77400272896, free=99895140352, active=2471727104, inactive=95625859072, buffers=79716352, cached=22993940480, shared=345878528, slab=428244992))
+gc: post=(pfullmem(rss=14281150464, vms=118646480896, shared=877158400, text=3043328, lib=0, data=75428016128, dirty=0, uss=13573230592, pss=13784617984, swap=0), svmem(total=200369070080, available=158334664704, percent=21.0, used=40064634880, free=137094107136, active=2482307072, inactive=58424832000, buffers=79716352, cached=23130611712, shared=345878528, slab=429793280))
+Retrieved SOMA batch totals: n_soma_batches=5, n_obs=1310720, nnz=6069002649, elapsed=0:03:45
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=434881803, elapsed=0:00:22
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=448446372, elapsed=0:00:23
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=485703630, elapsed=0:00:24
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1058423133, elapsed=0:00:40
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=7025205248, vms=80879128576, shared=855683072, text=3043328, lib=0, data=38153482240, dirty=0, uss=6333825024, pss=6535967744, swap=0), svmem(total=200369070080, available=135482724352, percent=32.4, used=62913081344, free=110644834304, active=2825629696, inactive=84521267200, buffers=79781888, cached=26731372544, shared=345878528, slab=436211712))
+gc: post=(pfullmem(rss=7024951296, vms=78798753792, shared=855683072, text=3043328, lib=0, data=36103389184, dirty=0, uss=6333562880, pss=6535705600, swap=0), svmem(total=200369070080, available=135485566976, percent=32.4, used=62910308352, free=110647746560, active=2825629696, inactive=84521738240, buffers=79781888, cached=26731233280, shared=345878528, slab=436113408))
+Retrieved SOMA batch totals: n_soma_batches=6, n_obs=1572864, nnz=3052188622, elapsed=0:02:27
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7118602240, vms=81233670144, shared=876773376, text=3043328, lib=0, data=38485753856, dirty=0, uss=6386581504, pss=6605421568, swap=0), svmem(total=200369070080, available=135482724352, percent=32.4, used=62913081344, free=110644834304, active=2825629696, inactive=84521267200, buffers=79781888, cached=26731372544, shared=345878528, slab=436211712))
+gc: post=(pfullmem(rss=7118602240, vms=81233670144, shared=876773376, text=3043328, lib=0, data=38485753856, dirty=0, uss=6386585600, pss=6605425664, swap=0), svmem(total=200369070080, available=135482470400, percent=32.4, used=62913404928, free=110644649984, active=2825629696, inactive=84525162496, buffers=79781888, cached=26731233280, shared=345878528, slab=436113408))
+Retrieved SOMA batch totals: n_soma_batches=6, n_obs=1572864, nnz=2783495319, elapsed=0:02:17
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=17694056448, vms=96040284160, shared=852590592, text=3043328, lib=0, data=52961636352, dirty=0, uss=16990834688, pss=17198833664, swap=0), svmem(total=200369070080, available=135482466304, percent=32.4, used=62913339392, free=110644576256, active=2825629696, inactive=84521267200, buffers=79781888, cached=26731372544, shared=345878528, slab=436211712))
+gc: post=(pfullmem(rss=7439929344, vms=90813792256, shared=852590592, text=3043328, lib=0, data=47906705408, dirty=0, uss=6730563584, pss=6938559488, swap=0), svmem(total=200369070080, available=158465294336, percent=20.9, used=39930314752, free=133627203584, active=2825637888, inactive=61529907200, buffers=79781888, cached=26731769856, shared=345878528, slab=439513088))
+Retrieved SOMA batch totals: n_soma_batches=6, n_obs=1572864, nnz=2801491630, elapsed=0:02:21
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=32154673152, vms=135910961152, shared=877158400, text=3043328, lib=0, data=92524855296, dirty=0, uss=31452835840, pss=31664223232, swap=0), svmem(total=200369070080, available=135482466304, percent=32.4, used=62913339392, free=110644576256, active=2825629696, inactive=84521267200, buffers=79781888, cached=26731372544, shared=345878528, slab=436211712))
+gc: post=(pfullmem(rss=11918880768, vms=103035494400, shared=877158400, text=3043328, lib=0, data=60115886080, dirty=0, uss=11211149312, pss=11422536704, swap=0), svmem(total=200369070080, available=162197659648, percent=19.1, used=36196315136, free=137230376960, active=2836348928, inactive=57967710208, buffers=79781888, cached=26862596096, shared=345878528, slab=437977088))
+Retrieved SOMA batch totals: n_soma_batches=6, n_obs=1572864, nnz=7127425782, elapsed=0:04:25
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=299476289, elapsed=0:00:16
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=396725276, elapsed=0:00:19
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=446121549, elapsed=0:00:21
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1078137595, elapsed=0:00:40
+Running GC...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=6663467008, vms=77763837952, shared=855683072, text=3043328, lib=0, data=35282579456, dirty=0, uss=5975453696, pss=6177596416, swap=0), svmem(total=200369070080, available=137813479424, percent=31.2, used=60578254848, free=109541576704, active=3144151040, inactive=85322747904, buffers=79851520, cached=30169387008, shared=345878528, slab=445431808))
+gc: post=(pfullmem(rss=6663168000, vms=76757204992, shared=855683072, text=3043328, lib=0, data=34295099392, dirty=0, uss=5975146496, pss=6177289216, swap=0), svmem(total=200369070080, available=137818198016, percent=31.2, used=60573536256, free=109546295296, active=3144151040, inactive=85322747904, buffers=79851520, cached=30169387008, shared=345878528, slab=445431808))
+Retrieved SOMA batch totals: n_soma_batches=7, n_obs=1835008, nnz=3448913898, elapsed=0:02:46
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6019391488, vms=78883745792, shared=876773376, text=3043328, lib=0, data=36341125120, dirty=0, uss=5287292928, pss=5506132992, swap=0), svmem(total=200369070080, available=137813479424, percent=31.2, used=60578254848, free=109541576704, active=3144151040, inactive=85322747904, buffers=79851520, cached=30169387008, shared=345878528, slab=445431808))
+gc: post=(pfullmem(rss=6019080192, vms=76266500096, shared=876773376, text=3043328, lib=0, data=33760804864, dirty=0, uss=5286977536, pss=5505817600, swap=0), svmem(total=200369070080, available=137816133632, percent=31.2, used=60575600640, free=109544230912, active=3144151040, inactive=85324296192, buffers=79851520, cached=30169387008, shared=345878528, slab=445431808))
+Retrieved SOMA batch totals: n_soma_batches=7, n_obs=1835008, nnz=3082971608, elapsed=0:02:33
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=16934907904, vms=99491164160, shared=852590592, text=3043328, lib=0, data=56543772672, dirty=0, uss=16233242624, pss=16441241600, swap=0), svmem(total=200369070080, available=137813479424, percent=31.2, used=60578254848, free=109541576704, active=3144151040, inactive=85322747904, buffers=79851520, cached=30169387008, shared=345878528, slab=445431808))
+gc: post=(pfullmem(rss=7105536000, vms=97754333184, shared=852590592, text=3043328, lib=0, data=54947721216, dirty=0, uss=6396518400, pss=6604517376, swap=0), svmem(total=200369070080, available=162723725312, percent=18.8, used=35667656704, free=134451466240, active=3144151040, inactive=60411535360, buffers=79851520, cached=30170095616, shared=345878528, slab=447328256))
+Retrieved SOMA batch totals: n_soma_batches=7, n_obs=1835008, nnz=3247613179, elapsed=0:02:42
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=32054734848, vms=123728908288, shared=877158400, text=3043328, lib=0, data=80599019520, dirty=0, uss=31354400768, pss=31565788160, swap=0), svmem(total=200369070080, available=137813479424, percent=31.2, used=60578254848, free=109541576704, active=3144151040, inactive=85322747904, buffers=79851520, cached=30169387008, shared=345878528, slab=445431808))
+gc: post=(pfullmem(rss=12087808000, vms=101437669376, shared=877158400, text=3043328, lib=0, data=58760622080, dirty=0, uss=11380891648, pss=11592279040, swap=0), svmem(total=200369070080, available=164765380608, percent=17.8, used=33625948160, free=136365305856, active=3148177408, inactive=58507243520, buffers=79851520, cached=30297964544, shared=345878528, slab=447299584))
+Retrieved SOMA batch totals: n_soma_batches=7, n_obs=1835008, nnz=8205563377, elapsed=0:05:05
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=285685767, elapsed=0:00:16
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=381184926, elapsed=0:00:20
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=429004341, elapsed=0:00:24
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1245289854, elapsed=0:00:46
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=5864034304, vms=77370175488, shared=876773376, text=3043328, lib=0, data=34978476032, dirty=0, uss=5130227712, pss=5349067776, swap=0), svmem(total=200369070080, available=133309493248, percent=33.5, used=65077805056, free=101027033088, active=3479691264, inactive=93487726592, buffers=79884288, cached=34184347648, shared=345878528, slab=455303168))
+gc: post=(pfullmem(rss=5857054720, vms=75826671616, shared=876773376, text=3043328, lib=0, data=33454039040, dirty=0, uss=5123244032, pss=5342084096, swap=0), svmem(total=200369070080, available=133338001408, percent=33.5, used=65049296896, free=101055541248, active=3479691264, inactive=93461405696, buffers=79884288, cached=34184347648, shared=345878528, slab=456335360))
+Retrieved SOMA batch totals: n_soma_batches=8, n_obs=2097152, nnz=3368657375, elapsed=0:02:49
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6525767680, vms=78281633792, shared=855683072, text=3043328, lib=0, data=36055904256, dirty=0, uss=5834342400, pss=6036485120, swap=0), svmem(total=200369070080, available=133309493248, percent=33.5, used=65077805056, free=101027033088, active=3479691264, inactive=93487726592, buffers=79884288, cached=34184347648, shared=345878528, slab=455303168))
+gc: post=(pfullmem(rss=6505775104, vms=76805238784, shared=855683072, text=3043328, lib=0, data=34598879232, dirty=0, uss=5814345728, pss=6016488448, swap=0), svmem(total=200369070080, available=133338001408, percent=33.5, used=65049296896, free=101055541248, active=3479691264, inactive=93461405696, buffers=79884288, cached=34184347648, shared=345878528, slab=456335360))
+Retrieved SOMA batch totals: n_soma_batches=8, n_obs=2097152, nnz=3830098824, elapsed=0:03:06
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=17289113600, vms=107928612864, shared=852590592, text=3043328, lib=0, data=65049325568, dirty=0, uss=16587694080, pss=16795693056, swap=0), svmem(total=200369070080, available=133309493248, percent=33.5, used=65077805056, free=101027033088, active=3479691264, inactive=93487726592, buffers=79884288, cached=34184347648, shared=345878528, slab=455303168))
+gc: post=(pfullmem(rss=7031791616, vms=98023194624, shared=852590592, text=3043328, lib=0, data=55440359424, dirty=0, uss=6323007488, pss=6531006464, swap=0), svmem(total=200369070080, available=157657325568, percent=21.3, used=40729931776, free=125374820352, active=3479691264, inactive=69126729728, buffers=79884288, cached=34184433664, shared=345878528, slab=456601600))
+Retrieved SOMA batch totals: n_soma_batches=8, n_obs=2097152, nnz=3676617520, elapsed=0:03:06
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=36497223680, vms=121492361216, shared=877158400, text=3043328, lib=0, data=78592131072, dirty=0, uss=35795865600, pss=36007252992, swap=0), svmem(total=200369070080, available=133309235200, percent=33.5, used=65078063104, free=101026775040, active=3479691264, inactive=93487726592, buffers=79884288, cached=34184347648, shared=345878528, slab=455303168))
+gc: post=(pfullmem(rss=13429477376, vms=111093194752, shared=877158400, text=3043328, lib=0, data=68474032128, dirty=0, uss=12722036736, pss=12933424128, swap=0), svmem(total=200369070080, available=162572320768, percent=18.9, used=35812450304, free=130154352640, active=3485573120, inactive=64340934656, buffers=79884288, cached=34322382848, shared=345878528, slab=457367552))
+Retrieved SOMA batch totals: n_soma_batches=8, n_obs=2097152, nnz=9450853231, elapsed=0:05:51
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=153592612, elapsed=0:00:08
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=225821356, elapsed=0:00:11
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=461359571, elapsed=0:00:25
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1391525325, elapsed=0:00:49
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=4792242176, vms=74782633984, shared=855683072, text=3043328, lib=0, data=32702644224, dirty=0, uss=4104261632, pss=4306404352, swap=0), svmem(total=200369070080, available=131574452224, percent=34.3, used=66808270848, free=95165673472, active=3813376000, inactive=98989305856, buffers=79941632, cached=38315184128, shared=345878528, slab=464375808))
+gc: post=(pfullmem(rss=4791468032, vms=68809945088, shared=855683072, text=3043328, lib=0, data=26830782464, dirty=0, uss=4103479296, pss=4305622016, swap=0), svmem(total=200369070080, available=131582525440, percent=34.3, used=66800197632, free=95173746688, active=3813376000, inactive=98991648768, buffers=79941632, cached=38315184128, shared=345878528, slab=465924096))
+Retrieved SOMA batch totals: n_soma_batches=9, n_obs=2359296, nnz=3983691436, elapsed=0:03:14
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=5446897664, vms=75486416896, shared=876773376, text=3043328, lib=0, data=33268178944, dirty=0, uss=4714377216, pss=4933217280, swap=0), svmem(total=200369070080, available=131574452224, percent=34.3, used=66808270848, free=95165673472, active=3813376000, inactive=98989305856, buffers=79941632, cached=38315184128, shared=345878528, slab=464375808))
+gc: post=(pfullmem(rss=5446483968, vms=74345566208, shared=876773376, text=3043328, lib=0, data=32147181568, dirty=0, uss=4713959424, pss=4932799488, swap=0), svmem(total=200369070080, available=131582525440, percent=34.3, used=66800197632, free=95173746688, active=3813376000, inactive=98991648768, buffers=79941632, cached=38315184128, shared=345878528, slab=465924096))
+Retrieved SOMA batch totals: n_soma_batches=9, n_obs=2359296, nnz=3594478731, elapsed=0:03:00
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=17860268032, vms=107679764480, shared=852590592, text=3043328, lib=0, data=65021632512, dirty=0, uss=17157525504, pss=17365524480, swap=0), svmem(total=200369070080, available=131571097600, percent=34.3, used=66811625472, free=95162318848, active=3813376000, inactive=98992164864, buffers=79941632, cached=38315184128, shared=345878528, slab=464375808))
+gc: post=(pfullmem(rss=7326318592, vms=103527014400, shared=852590592, text=3043328, lib=0, data=61028376576, dirty=0, uss=6616727552, pss=6824726528, swap=0), svmem(total=200369070080, available=158291410944, percent=21.0, used=40091779072, free=121882062848, active=3813376000, inactive=72281767936, buffers=79941632, cached=38315286528, shared=345878528, slab=466223104))
+Retrieved SOMA batch totals: n_soma_batches=9, n_obs=2359296, nnz=4137977091, elapsed=0:03:31
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=39788974080, vms=126198206464, shared=877158400, text=3043328, lib=0, data=83408732160, dirty=0, uss=39088156672, pss=39299544064, swap=0), svmem(total=200369070080, available=131571097600, percent=34.3, used=66811625472, free=95162318848, active=3813376000, inactive=98992164864, buffers=79941632, cached=38315184128, shared=345878528, slab=464375808))
+gc: post=(pfullmem(rss=14595325952, vms=113992273920, shared=877158400, text=3043328, lib=0, data=71400472576, dirty=0, uss=13888385024, pss=14099772416, swap=0), svmem(total=200369070080, available=163652452352, percent=18.3, used=34728202240, free=127093424128, active=3818176512, inactive=67064365056, buffers=79941632, cached=38467502080, shared=345878528, slab=467156992))
+Retrieved SOMA batch totals: n_soma_batches=9, n_obs=2359296, nnz=10842378556, elapsed=0:06:40
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=120402486, elapsed=0:00:06
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=239540682, elapsed=0:00:12
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=460376385, elapsed=0:00:25
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1137504038, elapsed=0:00:40
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=4407132160, vms=67952521216, shared=855683072, text=3043328, lib=0, data=26181529600, dirty=0, uss=3715805184, pss=3917947904, swap=0), svmem(total=200369070080, available=137175191552, percent=31.5, used=61202452480, free=97026355200, active=4099633152, inactive=96865157120, buffers=80195584, cached=42060066816, shared=345878528, slab=476184576))
+gc: post=(pfullmem(rss=4407062528, vms=67952521216, shared=855683072, text=3043328, lib=0, data=26181529600, dirty=0, uss=3715731456, pss=3917874176, swap=0), svmem(total=200369070080, available=137175191552, percent=31.5, used=61202452480, free=97026355200, active=4099633152, inactive=96865157120, buffers=80195584, cached=42060066816, shared=345878528, slab=476184576))
+Retrieved SOMA batch totals: n_soma_batches=10, n_obs=2621440, nnz=4104093922, elapsed=0:03:20
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=5478780928, vms=76377505792, shared=876773376, text=3043328, lib=0, data=34147962880, dirty=0, uss=4746039296, pss=4964879360, swap=0), svmem(total=200369070080, available=137175191552, percent=31.5, used=61202452480, free=97026355200, active=4099633152, inactive=96865157120, buffers=80195584, cached=42060066816, shared=345878528, slab=476184576))
+gc: post=(pfullmem(rss=5478723584, vms=75974852608, shared=876773376, text=3043328, lib=0, data=33752510464, dirty=0, uss=4745977856, pss=4964817920, swap=0), svmem(total=200369070080, available=137197383680, percent=31.5, used=61180260352, free=97048547328, active=4099633152, inactive=96839868416, buffers=80195584, cached=42060066816, shared=345878528, slab=476184576))
+Retrieved SOMA batch totals: n_soma_batches=10, n_obs=2621440, nnz=3834019413, elapsed=0:03:12
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=18627821568, vms=109621202944, shared=852590592, text=3043328, lib=0, data=67134894080, dirty=0, uss=17925099520, pss=18133098496, swap=0), svmem(total=200369070080, available=137175191552, percent=31.5, used=61202452480, free=97026355200, active=4099633152, inactive=96865157120, buffers=80195584, cached=42060066816, shared=345878528, slab=476184576))
+gc: post=(pfullmem(rss=7314817024, vms=101374812160, shared=852590592, text=3043328, lib=0, data=59059560448, dirty=0, uss=6605778944, pss=6813777920, swap=0), svmem(total=200369070080, available=164902440960, percent=17.7, used=33475039232, free=124749824000, active=4099641344, inactive=69127962624, buffers=80195584, cached=42064011264, shared=345878528, slab=477736960))
+Retrieved SOMA batch totals: n_soma_batches=10, n_obs=2621440, nnz=4598353476, elapsed=0:03:56
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=33799979008, vms=117150068736, shared=877158400, text=3043328, lib=0, data=74489806848, dirty=0, uss=33098858496, pss=33310245888, swap=0), svmem(total=200369070080, available=137175191552, percent=31.5, used=61202452480, free=97026355200, active=4099633152, inactive=96865157120, buffers=80195584, cached=42060066816, shared=345878528, slab=476184576))
+gc: post=(pfullmem(rss=12563922944, vms=103601946624, shared=877158400, text=3043328, lib=0, data=61269192704, dirty=0, uss=11856474112, pss=12067861504, swap=0), svmem(total=200369070080, available=166139633664, percent=17.1, used=32236277760, free=125848612864, active=4102676480, inactive=68027895808, buffers=80195584, cached=42203983872, shared=345878528, slab=477679616))
+Retrieved SOMA batch totals: n_soma_batches=10, n_obs=2621440, nnz=11979882594, elapsed=0:07:20
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=129727690, elapsed=0:00:07
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=226264869, elapsed=0:00:11
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=461515046, elapsed=0:00:25
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1472619125, elapsed=0:00:50
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=4514885632, vms=68865589248, shared=855683072, text=3043328, lib=0, data=27274760192, dirty=0, uss=3826831360, pss=4028974080, swap=0), svmem(total=200369070080, available=129044029440, percent=35.6, used=69329559552, free=84699037696, active=4432351232, inactive=108817281024, buffers=80252928, cached=46260219904, shared=345878528, slab=484982784))
+gc: post=(pfullmem(rss=4514746368, vms=67724738560, shared=855683072, text=3043328, lib=0, data=26154659840, dirty=0, uss=3826688000, pss=4028830720, swap=0), svmem(total=200369070080, available=129052286976, percent=35.6, used=69321302016, free=84707295232, active=4432351232, inactive=108810571776, buffers=80252928, cached=46260219904, shared=345878528, slab=484982784))
+Retrieved SOMA batch totals: n_soma_batches=11, n_obs=2883584, nnz=4233821612, elapsed=0:03:27
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=5490679808, vms=77507424256, shared=876773376, text=3043328, lib=0, data=35398131712, dirty=0, uss=4758278144, pss=4977118208, swap=0), svmem(total=200369070080, available=129044029440, percent=35.6, used=69329559552, free=84699037696, active=4432351232, inactive=108817281024, buffers=80252928, cached=46260219904, shared=345878528, slab=484982784))
+gc: post=(pfullmem(rss=5483941888, vms=74890178560, shared=876773376, text=3043328, lib=0, data=32816754688, dirty=0, uss=4751536128, pss=4970376192, swap=0), svmem(total=200369070080, available=129099964416, percent=35.6, used=69273620480, free=84754972672, active=4432351232, inactive=108757401600, buffers=80252928, cached=46260224000, shared=345878528, slab=484982784))
+Retrieved SOMA batch totals: n_soma_batches=11, n_obs=2883584, nnz=4060284282, elapsed=0:03:23
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=18543489024, vms=109900845056, shared=852590592, text=3043328, lib=0, data=67490140160, dirty=0, uss=17842454528, pss=18050453504, swap=0), svmem(total=200369070080, available=129044029440, percent=35.6, used=69329559552, free=84699037696, active=4432351232, inactive=108817281024, buffers=80252928, cached=46260219904, shared=345878528, slab=484982784))
+gc: post=(pfullmem(rss=7342706688, vms=104540135424, shared=852590592, text=3043328, lib=0, data=62253948928, dirty=0, uss=6634373120, pss=6842372096, swap=0), svmem(total=200369070080, available=156176498688, percent=22.1, used=42196439040, free=111824658432, active=4432359424, inactive=81673486336, buffers=80252928, cached=46267719680, shared=345878528, slab=487174144))
+Retrieved SOMA batch totals: n_soma_batches=11, n_obs=2883584, nnz=5059868522, elapsed=0:04:21
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=41853071360, vms=133524070400, shared=877158400, text=3043328, lib=0, data=90883895296, dirty=0, uss=41152294912, pss=41363682304, swap=0), svmem(total=200369070080, available=129044029440, percent=35.6, used=69329559552, free=84699037696, active=4432351232, inactive=108817281024, buffers=80252928, cached=46260219904, shared=345878528, slab=484982784))
+gc: post=(pfullmem(rss=15264382976, vms=115748089856, shared=877158400, text=3043328, lib=0, data=73420140544, dirty=0, uss=14556798976, pss=14768186368, swap=0), svmem(total=200369070080, available=162585997312, percent=18.9, used=35784740864, free=118080532480, active=4440690688, inactive=75420348416, buffers=80252928, cached=46423543808, shared=345878528, slab=488706048))
+Retrieved SOMA batch totals: n_soma_batches=11, n_obs=2883584, nnz=13452501719, elapsed=0:08:10
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=192347680, elapsed=0:00:10
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=378110464, elapsed=0:00:18
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=461714298, elapsed=0:00:27
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1365772731, elapsed=0:00:49
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=4983996416, vms=69278863360, shared=855683072, text=3043328, lib=0, data=27698278400, dirty=0, uss=4292612096, pss=4494754816, swap=0), svmem(total=200369070080, available=129784721408, percent=35.2, used=68583817216, free=81039654912, active=4783124480, inactive=112106901504, buffers=80302080, cached=50665295872, shared=345878528, slab=495038464))
+gc: post=(pfullmem(rss=4983787520, vms=67936686080, shared=855683072, text=3043328, lib=0, data=26379710464, dirty=0, uss=4292399104, pss=4494488576, swap=0), svmem(total=200369070080, available=129770196992, percent=35.2, used=68598341632, free=81025130496, active=4783140864, inactive=112119877632, buffers=80302080, cached=50665295872, shared=345878528, slab=495030272))
+Retrieved SOMA batch totals: n_soma_batches=12, n_obs=3145728, nnz=4426169292, elapsed=0:03:37
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6643433472, vms=77932359680, shared=876773376, text=3043328, lib=0, data=36026929152, dirty=0, uss=5909245952, pss=6128086016, swap=0), svmem(total=200369070080, available=129784721408, percent=35.2, used=68583817216, free=81039654912, active=4783124480, inactive=112106901504, buffers=80302080, cached=50665295872, shared=345878528, slab=495038464))
+gc: post=(pfullmem(rss=6628098048, vms=76590182400, shared=876773376, text=3043328, lib=0, data=34707992576, dirty=0, uss=5893906432, pss=6112693248, swap=0), svmem(total=200369070080, available=129760907264, percent=35.2, used=68607627264, free=81015840768, active=4783140864, inactive=112128135168, buffers=80302080, cached=50665299968, shared=345878528, slab=495030272))
+Retrieved SOMA batch totals: n_soma_batches=12, n_obs=3145728, nnz=4438394746, elapsed=0:03:41
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=18589249536, vms=113269411840, shared=852590592, text=3043328, lib=0, data=70920622080, dirty=0, uss=17886642176, pss=18094641152, swap=0), svmem(total=200369070080, available=129784721408, percent=35.2, used=68583817216, free=81039654912, active=4783124480, inactive=112106901504, buffers=80302080, cached=50665295872, shared=345878528, slab=495038464))
+gc: post=(pfullmem(rss=7379922944, vms=104083496960, shared=852590592, text=3043328, lib=0, data=62005837824, dirty=0, uss=6670716928, pss=6878715904, swap=0), svmem(total=200369070080, available=154632785920, percent=22.8, used=43736100864, free=105887031296, active=4783124480, inactive=87254896640, buffers=80302080, cached=50665635840, shared=345878528, slab=496267264))
+Retrieved SOMA batch totals: n_soma_batches=12, n_obs=3145728, nnz=5521582820, elapsed=0:04:48
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=39443042304, vms=132843405312, shared=877158400, text=3043328, lib=0, data=90242150400, dirty=0, uss=38741786624, pss=38953121792, swap=0), svmem(total=200369070080, available=129760280576, percent=35.2, used=68608258048, free=81015214080, active=4783132672, inactive=112130121728, buffers=80302080, cached=50665295872, shared=345878528, slab=495038464))
+gc: post=(pfullmem(rss=14434619392, vms=122516529152, shared=877158400, text=3043328, lib=0, data=80213250048, dirty=0, uss=13727105024, pss=13938441216, swap=0), svmem(total=200369070080, available=161412956160, percent=19.4, used=36953145344, free=112504819712, active=4796899328, inactive=80621490176, buffers=80302080, cached=50830802944, shared=345878528, slab=496463872))
+Retrieved SOMA batch totals: n_soma_batches=12, n_obs=3145728, nnz=14818274450, elapsed=0:08:59
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=182697412, elapsed=0:00:09
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=483510771, elapsed=0:00:21
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=566481537, elapsed=0:00:24
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1151513290, elapsed=0:00:40
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=4927266816, vms=69369036800, shared=856383488, text=3043328, lib=0, data=27930910720, dirty=0, uss=4238503936, pss=4440646656, swap=0), svmem(total=200369070080, available=132399493120, percent=33.9, used=65965187072, free=80042139648, active=5128904704, inactive=112721207296, buffers=80359424, cached=54281383936, shared=345878528, slab=503611392))
+gc: post=(pfullmem(rss=4927209472, vms=68966383616, shared=856383488, text=3043328, lib=0, data=27536621568, dirty=0, uss=4238446592, pss=4440589312, swap=0), svmem(total=200369070080, available=132410920960, percent=33.9, used=65953759232, free=80053567488, active=5128904704, inactive=112715014144, buffers=80359424, cached=54281383936, shared=345878528, slab=503611392))
+Retrieved SOMA batch totals: n_soma_batches=13, n_obs=3407872, nnz=4608866704, elapsed=0:03:46
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7582769152, vms=81859678208, shared=876773376, text=3043328, lib=0, data=39995363328, dirty=0, uss=6850293760, pss=7069133824, swap=0), svmem(total=200369070080, available=132399493120, percent=33.9, used=65965187072, free=80042139648, active=5128904704, inactive=112721207296, buffers=80359424, cached=54281383936, shared=345878528, slab=503611392))
+gc: post=(pfullmem(rss=7576084480, vms=79108214784, shared=876773376, text=3043328, lib=0, data=37285150720, dirty=0, uss=6843604992, pss=7062445056, swap=0), svmem(total=200369070080, available=132459098112, percent=33.9, used=65905577984, free=80101744640, active=5128904704, inactive=112660205568, buffers=80359424, cached=54281388032, shared=345878528, slab=503611392))
+Retrieved SOMA batch totals: n_soma_batches=13, n_obs=3407872, nnz=4921905517, elapsed=0:04:02
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=20250755072, vms=114276106240, shared=852590592, text=3043328, lib=0, data=72152653824, dirty=0, uss=19544608768, pss=19752607744, swap=0), svmem(total=200369070080, available=132399493120, percent=33.9, used=65965187072, free=80042139648, active=5128904704, inactive=112721207296, buffers=80359424, cached=54281383936, shared=345878528, slab=503611392))
+gc: post=(pfullmem(rss=8175022080, vms=108481552384, shared=852590592, text=3043328, lib=0, data=66518020096, dirty=0, uss=7462109184, pss=7670108160, swap=0), svmem(total=200369070080, available=159444639744, percent=20.4, used=38919380992, free=107077849088, active=5129936896, inactive=85671579648, buffers=80359424, cached=54291480576, shared=345878528, slab=505270272))
+Retrieved SOMA batch totals: n_soma_batches=13, n_obs=3407872, nnz=6088064357, elapsed=0:05:12
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=34244481024, vms=141063426048, shared=877158400, text=3043328, lib=0, data=98534363136, dirty=0, uss=33543180288, pss=33754567680, swap=0), svmem(total=200369070080, available=132399493120, percent=33.9, used=65965187072, free=80042139648, active=5128904704, inactive=112721207296, buffers=80359424, cached=54281383936, shared=345878528, slab=503611392))
+gc: post=(pfullmem(rss=12740190208, vms=98300665856, shared=877158400, text=3043328, lib=0, data=56362766336, dirty=0, uss=12032925696, pss=12244313088, swap=0), svmem(total=200369070080, available=162246631424, percent=19.0, used=36114386944, free=109741756416, active=5135290368, inactive=83041767424, buffers=80359424, cached=54432567296, shared=345878528, slab=507535360))
+Retrieved SOMA batch totals: n_soma_batches=13, n_obs=3407872, nnz=15969787740, elapsed=0:09:39
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=177054902, elapsed=0:00:09
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=349168621, elapsed=0:00:18
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=520609654, elapsed=0:00:22
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=722741212, elapsed=0:00:28
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=4850835456, vms=69728649216, shared=856383488, text=3043328, lib=0, data=28352233472, dirty=0, uss=4162314240, pss=4364456960, swap=0), svmem(total=200369070080, available=145671839744, percent=27.3, used=52689240064, free=90435801088, active=5366153216, inactive=102143406080, buffers=80408576, cached=57163620352, shared=345878528, slab=510423040))
+gc: post=(pfullmem(rss=4850810880, vms=69728649216, shared=856383488, text=3043328, lib=0, data=28352233472, dirty=0, uss=4162289664, pss=4364432384, swap=0), svmem(total=200369070080, available=145677570048, percent=27.3, used=52683509760, free=90441531392, active=5366153216, inactive=102142889984, buffers=80408576, cached=57163620352, shared=345878528, slab=510423040))
+Retrieved SOMA batch totals: n_soma_batches=14, n_obs=3670016, nnz=4785921606, elapsed=0:03:55
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6536310784, vms=82093162496, shared=876773376, text=3043328, lib=0, data=40401469440, dirty=0, uss=5803679744, pss=6022519808, swap=0), svmem(total=200369070080, available=145671839744, percent=27.3, used=52689240064, free=90435801088, active=5366153216, inactive=102143406080, buffers=80408576, cached=57163620352, shared=345878528, slab=510423040))
+gc: post=(pfullmem(rss=6535761920, vms=78066630656, shared=876773376, text=3043328, lib=0, data=36436856832, dirty=0, uss=5803126784, pss=6021966848, swap=0), svmem(total=200369070080, available=145693052928, percent=27.3, used=52668026880, free=90457014272, active=5366153216, inactive=102121644032, buffers=80408576, cached=57163620352, shared=345878528, slab=510423040))
+Retrieved SOMA batch totals: n_soma_batches=14, n_obs=3670016, nnz=5271074138, elapsed=0:04:20
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=18641547264, vms=116297003008, shared=852590592, text=3043328, lib=0, data=74231840768, dirty=0, uss=17939193856, pss=18147192832, swap=0), svmem(total=200369070080, available=145671839744, percent=27.3, used=52689240064, free=90435801088, active=5366153216, inactive=102143406080, buffers=80408576, cached=57163620352, shared=345878528, slab=510423040))
+gc: post=(pfullmem(rss=7792041984, vms=106372890624, shared=852590592, text=3043328, lib=0, data=64516395008, dirty=0, uss=7082676224, pss=7290675200, swap=0), svmem(total=200369070080, available=169604460544, percent=15.4, used=28756500480, free=114368294912, active=5366153216, inactive=78209728512, buffers=80408576, cached=57163866112, shared=345878528, slab=511442944))
+Retrieved SOMA batch totals: n_soma_batches=14, n_obs=3670016, nnz=6608674011, elapsed=0:05:34
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=23756476416, vms=108806217728, shared=877158400, text=3043328, lib=0, data=66644045824, dirty=0, uss=23056068608, pss=23267456000, swap=0), svmem(total=200369070080, available=145671839744, percent=27.3, used=52689240064, free=90435801088, active=5366153216, inactive=102143406080, buffers=80408576, cached=57163620352, shared=345878528, slab=510423040))
+gc: post=(pfullmem(rss=9301381120, vms=90730741760, shared=877158400, text=3043328, lib=0, data=48907972608, dirty=0, uss=8594239488, pss=8805576704, swap=0), svmem(total=200369070080, available=169915076608, percent=15.2, used=28444807168, free=114560131072, active=5367762944, inactive=78024114176, buffers=80408576, cached=57283723264, shared=345878528, slab=511545344))
+Retrieved SOMA batch totals: n_soma_batches=14, n_obs=3670016, nnz=16692528952, elapsed=0:10:07
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=141981541, elapsed=0:00:08
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=310404674, elapsed=0:00:14
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=489662563, elapsed=0:00:20
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=538445648, elapsed=0:00:21
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=4604837888, vms=68288729088, shared=856383488, text=3043328, lib=0, data=26991013888, dirty=0, uss=3912650752, pss=4114793472, swap=0), svmem(total=200369070080, available=162111139840, percent=19.1, used=36247691264, free=104463990784, active=5560864768, inactive=87956369408, buffers=80482304, cached=59576905728, shared=345878528, slab=513548288))
+gc: post=(pfullmem(rss=4604792832, vms=67886075904, shared=856383488, text=3043328, lib=0, data=26595676160, dirty=0, uss=3912601600, pss=4114744320, swap=0), svmem(total=200369070080, available=162128367616, percent=19.1, used=36230463488, free=104481218560, active=5560864768, inactive=87956008960, buffers=80482304, cached=59576905728, shared=345878528, slab=513630208))
+Retrieved SOMA batch totals: n_soma_batches=15, n_obs=3932160, nnz=4927903147, elapsed=0:04:03
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6084866048, vms=78383063040, shared=876773376, text=3043328, lib=0, data=36941131776, dirty=0, uss=5352321024, pss=5571161088, swap=0), svmem(total=200369070080, available=162111139840, percent=19.1, used=36247691264, free=104463990784, active=5560864768, inactive=87956369408, buffers=80482304, cached=59576905728, shared=345878528, slab=513548288))
+gc: post=(pfullmem(rss=6084718592, vms=77644865536, shared=876773376, text=3043328, lib=0, data=36208066560, dirty=0, uss=5352173568, pss=5571013632, swap=0), svmem(total=200369070080, available=162148495360, percent=19.1, used=36210335744, free=104501346304, active=5560864768, inactive=87932268544, buffers=80482304, cached=59576905728, shared=345878528, slab=513630208))
+Retrieved SOMA batch totals: n_soma_batches=15, n_obs=3932160, nnz=5581478812, elapsed=0:04:34
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7799377920, vms=88743436288, shared=877158400, text=3043328, lib=0, data=47096401920, dirty=0, uss=7092047872, pss=7303435264, swap=0), svmem(total=200369070080, available=162111139840, percent=19.1, used=36247691264, free=104463990784, active=5560864768, inactive=87956369408, buffers=80482304, cached=59576905728, shared=345878528, slab=513548288))
+gc: post=(pfullmem(rss=7797923840, vms=77133602816, shared=877158400, text=3043328, lib=0, data=35690512384, dirty=0, uss=7090593792, pss=7301981184, swap=0), svmem(total=200369070080, available=162152374272, percent=19.1, used=36206456832, free=104505225216, active=5560864768, inactive=87919259648, buffers=80482304, cached=59576905728, shared=345878528, slab=514154496))
+Retrieved SOMA batch totals: n_soma_batches=15, n_obs=3932160, nnz=17182191515, elapsed=0:10:27
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=18906628096, vms=116386213888, shared=852590592, text=3043328, lib=0, data=74381647872, dirty=0, uss=18202791936, pss=18410790912, swap=0), svmem(total=200369070080, available=162109788160, percent=19.1, used=36249042944, free=104462639104, active=5560864768, inactive=87957041152, buffers=80482304, cached=59576905728, shared=345878528, slab=513630208))
+gc: post=(pfullmem(rss=7945326592, vms=99818323968, shared=852590592, text=3043328, lib=0, data=58014756864, dirty=0, uss=7235956736, pss=7443955712, swap=0), svmem(total=200369070080, available=172107649024, percent=14.1, used=26251186176, free=114460495872, active=5560864768, inactive=77967552512, buffers=80482304, cached=59576905728, shared=345878528, slab=514818048))
+Retrieved SOMA batch totals: n_soma_batches=15, n_obs=3932160, nnz=7147119659, elapsed=0:05:55
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=137571438, elapsed=0:00:09
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=339303397, elapsed=0:00:19
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=502557014, elapsed=0:00:24
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=549183745, elapsed=0:00:27
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=4564258816, vms=69395222528, shared=856383488, text=3043328, lib=0, data=28209274880, dirty=0, uss=3872145408, pss=4074288128, swap=0), svmem(total=200369070080, available=148323856384, percent=26.0, used=50031869952, free=87671984128, active=5766533120, inactive=104541020160, buffers=80523264, cached=62584692736, shared=345878528, slab=520896512))
+gc: post=(pfullmem(rss=4564230144, vms=69261004800, shared=856383488, text=3043328, lib=0, data=28076359680, dirty=0, uss=3872112640, pss=4074255360, swap=0), svmem(total=200369070080, available=150499102720, percent=24.9, used=47856623616, free=89847230464, active=5766533120, inactive=102370500608, buffers=80523264, cached=62584692736, shared=345878528, slab=520896512))
+Retrieved SOMA batch totals: n_soma_batches=16, n_obs=4194304, nnz=5065474585, elapsed=0:04:12
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6420480000, vms=82064969728, shared=876773376, text=3043328, lib=0, data=40565325824, dirty=0, uss=5687590912, pss=5906430976, swap=0), svmem(total=200369070080, available=150494420992, percent=24.9, used=47861305344, free=89842548736, active=5766533120, inactive=102374662144, buffers=80523264, cached=62584692736, shared=345878528, slab=520896512))
+gc: post=(pfullmem(rss=6415982592, vms=80588574720, shared=876773376, text=3043328, lib=0, data=39100375040, dirty=0, uss=5683093504, pss=5901933568, swap=0), svmem(total=200369070080, available=150517682176, percent=24.9, used=47838044160, free=89865809920, active=5766533120, inactive=102345211904, buffers=80523264, cached=62584692736, shared=345878528, slab=520896512))
+Retrieved SOMA batch totals: n_soma_batches=16, n_obs=4194304, nnz=5920782209, elapsed=0:04:53
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=19583946752, vms=87231627264, shared=877158400, text=3043328, lib=0, data=45683449856, dirty=0, uss=18878193664, pss=19089581056, swap=0), svmem(total=200369070080, available=150494420992, percent=24.9, used=47861305344, free=89842548736, active=5766533120, inactive=102374662144, buffers=80523264, cached=62584692736, shared=345878528, slab=520896512))
+gc: post=(pfullmem(rss=7932841984, vms=77746085888, shared=877158400, text=3043328, lib=0, data=36416561152, dirty=0, uss=7222013952, pss=7433401344, swap=0), svmem(total=200369070080, available=172076101632, percent=14.1, used=26279493632, free=111424098304, active=5766533120, inactive=80795934720, buffers=80523264, cached=62584954880, shared=345878528, slab=522280960))
+Retrieved SOMA batch totals: n_soma_batches=16, n_obs=4194304, nnz=17731375260, elapsed=0:10:54
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=18447142912, vms=109458477056, shared=852590592, text=3043328, lib=0, data=67562237952, dirty=0, uss=17744453632, pss=17952452608, swap=0), svmem(total=200369070080, available=150494420992, percent=24.9, used=47861305344, free=89842548736, active=5766533120, inactive=102374629376, buffers=80523264, cached=62584692736, shared=345878528, slab=520896512))
+gc: post=(pfullmem(rss=7678234624, vms=103225352192, shared=852590592, text=3043328, lib=0, data=61432954880, dirty=0, uss=6968664064, pss=7176663040, swap=0), svmem(total=200369070080, available=171996483584, percent=14.2, used=26358595584, free=111343964160, active=5766533120, inactive=80864522240, buffers=80523264, cached=62585987072, shared=345878528, slab=522280960))
+Retrieved SOMA batch totals: n_soma_batches=16, n_obs=4194304, nnz=7649676673, elapsed=0:06:19
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=135255805, elapsed=0:00:08
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=373507865, elapsed=0:00:18
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=496413995, elapsed=0:00:22
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=517708721, elapsed=0:00:22
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=4598665216, vms=70076080128, shared=856383488, text=3043328, lib=0, data=29003431936, dirty=0, uss=3906580480, pss=4108723200, swap=0), svmem(total=200369070080, available=158301847552, percent=21.0, used=40051437568, free=95183126528, active=5980979200, inactive=96833916928, buffers=80580608, cached=65053925376, shared=345878528, slab=525660160))
+gc: post=(pfullmem(rss=4598538240, vms=69807644672, shared=856383488, text=3043328, lib=0, data=28739182592, dirty=0, uss=3906449408, pss=4108592128, swap=0), svmem(total=200369070080, available=158313480192, percent=21.0, used=40039755776, free=95194710016, active=5980979200, inactive=96824774656, buffers=80580608, cached=65054023680, shared=345878528, slab=525774848))
+Retrieved SOMA batch totals: n_soma_batches=17, n_obs=4456448, nnz=5200730390, elapsed=0:04:20
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6699118592, vms=82676248576, shared=876773376, text=3043328, lib=0, data=41294778368, dirty=0, uss=5966393344, pss=6185233408, swap=0), svmem(total=200369070080, available=158301847552, percent=21.0, used=40051437568, free=95183126528, active=5980979200, inactive=96833916928, buffers=80580608, cached=65053925376, shared=345878528, slab=525660160))
+gc: post=(pfullmem(rss=6698733568, vms=79723458560, shared=876773376, text=3043328, lib=0, data=38389690368, dirty=0, uss=5966008320, pss=6184848384, swap=0), svmem(total=200369070080, available=159158845440, percent=20.6, used=39194390528, free=96040075264, active=5980979200, inactive=95982505984, buffers=80580608, cached=65054023680, shared=345878528, slab=525774848))
+Retrieved SOMA batch totals: n_soma_batches=17, n_obs=4456448, nnz=6294290074, elapsed=0:05:11
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=11726884864, vms=78368792576, shared=877158400, text=3043328, lib=0, data=37176791040, dirty=0, uss=11019124736, pss=11230509056, swap=0), svmem(total=200369070080, available=158287921152, percent=21.0, used=40065363968, free=95169200128, active=5980979200, inactive=96846303232, buffers=80580608, cached=65053925376, shared=345878528, slab=525660160))
+gc: post=(pfullmem(rss=10950344704, vms=75818655744, shared=877158400, text=3043328, lib=0, data=34663723008, dirty=0, uss=10242584576, pss=10453971968, swap=0), svmem(total=200369070080, available=159730253824, percent=20.3, used=38622982144, free=96611483648, active=5980979200, inactive=95398072320, buffers=80580608, cached=65054023680, shared=345878528, slab=527384576))
+Retrieved SOMA batch totals: n_soma_batches=17, n_obs=4456448, nnz=18249083981, elapsed=0:11:16
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=18200788992, vms=112096833536, shared=852590592, text=3043328, lib=0, data=70094528512, dirty=0, uss=17498275840, pss=17706222592, swap=0), svmem(total=200369070080, available=158274666496, percent=21.0, used=40078569472, free=95155896320, active=5980987392, inactive=96860340224, buffers=80580608, cached=65054023680, shared=345878528, slab=526200832))
+gc: post=(pfullmem(rss=7625334784, vms=106870341632, shared=852590592, text=3043328, lib=0, data=65055674368, dirty=0, uss=6915624960, pss=7123623936, swap=0), svmem(total=200369070080, available=171927965696, percent=14.2, used=26425004032, free=108808929280, active=5980979200, inactive=83197251584, buffers=80580608, cached=65054556160, shared=345878528, slab=529698816))
+Retrieved SOMA batch totals: n_soma_batches=17, n_obs=4456448, nnz=8146090668, elapsed=0:06:41
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=202374691, elapsed=0:00:12
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=385307472, elapsed=0:00:18
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=405105401, elapsed=0:00:20
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=539870531, elapsed=0:00:23
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=5103849472, vms=72736542720, shared=856383488, text=3043328, lib=0, data=31735607296, dirty=0, uss=4411609088, pss=4613751808, swap=0), svmem(total=200369070080, available=160872431616, percent=19.7, used=37477588992, free=95315841024, active=6194315264, inactive=96455946240, buffers=80621568, cached=67495018496, shared=345878528, slab=532926464))
+gc: post=(pfullmem(rss=5103484928, vms=71595692032, shared=856383488, text=3043328, lib=0, data=30608052224, dirty=0, uss=4411240448, pss=4613383168, swap=0), svmem(total=200369070080, available=160870813696, percent=19.7, used=37479190528, free=95314206720, active=6194307072, inactive=96458715136, buffers=80621568, cached=67495051264, shared=345878528, slab=532574208))
+Retrieved SOMA batch totals: n_soma_batches=18, n_obs=4718592, nnz=5403105081, elapsed=0:04:32
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7118880768, vms=81496596480, shared=877596672, text=3043328, lib=0, data=40340205568, dirty=0, uss=6412652544, pss=6624039936, swap=0), svmem(total=200369070080, available=160872431616, percent=19.7, used=37477588992, free=95315841024, active=6194315264, inactive=96455946240, buffers=80621568, cached=67495018496, shared=345878528, slab=532926464))
+gc: post=(pfullmem(rss=7118270464, vms=79349112832, shared=877596672, text=3043328, lib=0, data=38226644992, dirty=0, uss=6412042240, pss=6623429632, swap=0), svmem(total=200369070080, available=160890462208, percent=19.7, used=37459542016, free=95333855232, active=6194307072, inactive=96432857088, buffers=80621568, cached=67495051264, shared=345878528, slab=532574208))
+Retrieved SOMA batch totals: n_soma_batches=18, n_obs=4718592, nnz=18654189382, elapsed=0:11:36
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6723584000, vms=81368444928, shared=876773376, text=3043328, lib=0, data=40125771776, dirty=0, uss=5989183488, pss=6208023552, swap=0), svmem(total=200369070080, available=160871669760, percent=19.7, used=37478350848, free=95315079168, active=6194315264, inactive=96455946240, buffers=80621568, cached=67495018496, shared=345878528, slab=533442560))
+gc: post=(pfullmem(rss=6723584000, vms=81368444928, shared=876773376, text=3043328, lib=0, data=40125771776, dirty=0, uss=5989187584, pss=6208027648, swap=0), svmem(total=200369070080, available=160880914432, percent=19.7, used=37469089792, free=95324307456, active=6194307072, inactive=96441204736, buffers=80621568, cached=67495051264, shared=345878528, slab=532574208))
+Retrieved SOMA batch totals: n_soma_batches=18, n_obs=4718592, nnz=6679597546, elapsed=0:05:29
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=19682004992, vms=112313413632, shared=852590592, text=3043328, lib=0, data=70353625088, dirty=0, uss=18978488320, pss=19186487296, swap=0), svmem(total=200369070080, available=160870907904, percent=19.7, used=37479112704, free=95314317312, active=6194315264, inactive=96455946240, buffers=80621568, cached=67495018496, shared=345878528, slab=534474752))
+gc: post=(pfullmem(rss=7990816768, vms=104469676032, shared=852590592, text=3043328, lib=0, data=62704107520, dirty=0, uss=7281057792, pss=7489056768, swap=0), svmem(total=200369070080, available=171330027520, percent=14.5, used=27019976704, free=105769807872, active=6194307072, inactive=85992448000, buffers=80621568, cached=67498663936, shared=345878528, slab=534159360))
+Retrieved SOMA batch totals: n_soma_batches=18, n_obs=4718592, nnz=8685961199, elapsed=0:07:04
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=189308178, elapsed=0:00:11
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=346893099, elapsed=0:00:17
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=484752289, elapsed=0:00:22
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=540426747, elapsed=0:00:23
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=4966551552, vms=73921630208, shared=856383488, text=3043328, lib=0, data=33035218944, dirty=0, uss=4274495488, pss=4476638208, swap=0), svmem(total=200369070080, available=160870547456, percent=19.7, used=37476233216, free=92787924992, active=6409351168, inactive=98749710336, buffers=80687104, cached=70024224768, shared=345878528, slab=538972160))
+gc: post=(pfullmem(rss=4966330368, vms=72646561792, shared=856383488, text=3043328, lib=0, data=31787335680, dirty=0, uss=4274270208, pss=4476412928, swap=0), svmem(total=200369070080, available=160871665664, percent=19.7, used=37475115008, free=92789043200, active=6409359360, inactive=98749562880, buffers=80687104, cached=70024224768, shared=345878528, slab=538972160))
+Retrieved SOMA batch totals: n_soma_batches=19, n_obs=4980736, nnz=5592413259, elapsed=0:04:43
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6511370240, vms=78427283456, shared=877596672, text=3043328, lib=0, data=37464838144, dirty=0, uss=5803560960, pss=6014948352, swap=0), svmem(total=200369070080, available=160870547456, percent=19.7, used=37476233216, free=92787924992, active=6409351168, inactive=98749710336, buffers=80687104, cached=70024224768, shared=345878528, slab=538972160))
+gc: post=(pfullmem(rss=6511362048, vms=78427283456, shared=877596672, text=3043328, lib=0, data=37464838144, dirty=0, uss=5803552768, pss=6014940160, swap=0), svmem(total=200369070080, available=160863195136, percent=19.7, used=37483585536, free=92780572672, active=6409359360, inactive=98752577536, buffers=80687104, cached=70024224768, shared=345878528, slab=538972160))
+Retrieved SOMA batch totals: n_soma_batches=19, n_obs=4980736, nnz=19001082481, elapsed=0:11:53
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7579586560, vms=88963223552, shared=876773376, text=3043328, lib=0, data=47817564160, dirty=0, uss=6846853120, pss=7065693184, swap=0), svmem(total=200369070080, available=160870547456, percent=19.7, used=37476233216, free=92787924992, active=6409351168, inactive=98749710336, buffers=80687104, cached=70024224768, shared=345878528, slab=538972160))
+gc: post=(pfullmem(rss=7579004928, vms=85003800576, shared=876773376, text=3043328, lib=0, data=43914690560, dirty=0, uss=6846267392, pss=7065107456, swap=0), svmem(total=200369070080, available=160905682944, percent=19.7, used=37441613824, free=92822544384, active=6409359360, inactive=98702614528, buffers=80687104, cached=70024224768, shared=345878528, slab=538972160))
+Retrieved SOMA batch totals: n_soma_batches=19, n_obs=4980736, nnz=7164349835, elapsed=0:05:51
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=19550646272, vms=115487707136, shared=852590592, text=3043328, lib=0, data=73577455616, dirty=0, uss=18847158272, pss=19055104000, swap=0), svmem(total=200369070080, available=160845336576, percent=19.7, used=37501444096, free=92762714112, active=6409359360, inactive=98773303296, buffers=80687104, cached=70024224768, shared=345878528, slab=538972160))
+gc: post=(pfullmem(rss=8002789376, vms=108986146816, shared=852590592, text=3043328, lib=0, data=67210366976, dirty=0, uss=7292801024, pss=7500800000, swap=0), svmem(total=200369070080, available=171104952320, percent=14.6, used=27240787968, free=103017160704, active=6409351168, inactive=88496963584, buffers=80687104, cached=70030434304, shared=345878528, slab=542105600))
+Retrieved SOMA batch totals: n_soma_batches=19, n_obs=4980736, nnz=9226387946, elapsed=0:07:27
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=188434393, elapsed=0:00:11
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=353442853, elapsed=0:00:19
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=503326026, elapsed=0:00:23
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1009210585, elapsed=0:00:39
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=4957818880, vms=71568052224, shared=856383488, text=3043328, lib=0, data=30834364416, dirty=0, uss=4265807872, pss=4467915776, swap=0), svmem(total=200369070080, available=149120126976, percent=25.6, used=49222041600, free=77602193408, active=6732402688, inactive=113586446336, buffers=80777216, cached=73464057856, shared=345886720, slab=549048320))
+gc: post=(pfullmem(rss=4957757440, vms=71031181312, shared=856383488, text=3043328, lib=0, data=30306897920, dirty=0, uss=4265742336, pss=4467850240, swap=0), svmem(total=200369070080, available=149120126976, percent=25.6, used=49222041600, free=77602193408, active=6732402688, inactive=113586446336, buffers=80777216, cached=73464057856, shared=345886720, slab=549564416))
+Retrieved SOMA batch totals: n_soma_batches=20, n_obs=5242880, nnz=5780847652, elapsed=0:04:54
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6554054656, vms=81971576832, shared=877596672, text=3043328, lib=0, data=41022844928, dirty=0, uss=5847535616, pss=6058874880, swap=0), svmem(total=200369070080, available=149120126976, percent=25.6, used=49222041600, free=77602193408, active=6732402688, inactive=113586446336, buffers=80777216, cached=73464057856, shared=345886720, slab=549048320))
+gc: post=(pfullmem(rss=6553968640, vms=81367597056, shared=877596672, text=3043328, lib=0, data=40431411200, dirty=0, uss=5847449600, pss=6058788864, swap=0), svmem(total=200369070080, available=149140185088, percent=25.6, used=49201983488, free=77622251520, active=6732402688, inactive=113558999040, buffers=80777216, cached=73464057856, shared=345886720, slab=549564416))
+Retrieved SOMA batch totals: n_soma_batches=20, n_obs=5242880, nnz=19354525334, elapsed=0:12:12
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7741509632, vms=87033540608, shared=876773376, text=3043328, lib=0, data=45970120704, dirty=0, uss=7008276480, pss=7227079680, swap=0), svmem(total=200369070080, available=149120126976, percent=25.6, used=49222041600, free=77602193408, active=6732402688, inactive=113586446336, buffers=80777216, cached=73464057856, shared=345886720, slab=549048320))
+gc: post=(pfullmem(rss=7741509632, vms=87033540608, shared=876773376, text=3043328, lib=0, data=45970120704, dirty=0, uss=7008280576, pss=7227083776, swap=0), svmem(total=200369070080, available=149130493952, percent=25.6, used=49211674624, free=77612560384, active=6732402688, inactive=113560031232, buffers=80777216, cached=73464057856, shared=345886720, slab=550088704))
+Retrieved SOMA batch totals: n_soma_batches=20, n_obs=5242880, nnz=7667675861, elapsed=0:06:14
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=31083565056, vms=126891536384, shared=852590592, text=3043328, lib=0, data=84943912960, dirty=0, uss=30380687360, pss=30588649472, swap=0), svmem(total=200369070080, available=149120126976, percent=25.6, used=49222041600, free=77602193408, active=6732402688, inactive=113586446336, buffers=80777216, cached=73464057856, shared=345886720, slab=549048320))
+gc: post=(pfullmem(rss=11803004928, vms=116631879680, shared=852590592, text=3043328, lib=0, data=74899578880, dirty=0, uss=11093168128, pss=11301130240, swap=0), svmem(total=200369070080, available=165728292864, percent=17.3, used=32612929536, free=94018863104, active=6737010688, inactive=97124421632, buffers=80777216, cached=73656500224, shared=345886720, slab=552017920))
+Retrieved SOMA batch totals: n_soma_batches=20, n_obs=5242880, nnz=10235598531, elapsed=0:08:06
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=161298397, elapsed=0:00:09
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=335536734, elapsed=0:00:16
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=360493051, elapsed=0:00:16
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1446545899, elapsed=0:00:50
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=4953530368, vms=71341690880, shared=856383488, text=3043328, lib=0, data=30687318016, dirty=0, uss=4265041920, pss=4467149824, swap=0), svmem(total=200369070080, available=131413106688, percent=34.4, used=66931130368, free=56168361984, active=7083077632, inactive=134587592704, buffers=80834560, cached=77188743168, shared=345886720, slab=557928448))
+gc: post=(pfullmem(rss=4953493504, vms=71073255424, shared=856383488, text=3043328, lib=0, data=30423523328, dirty=0, uss=4265000960, pss=4467108864, swap=0), svmem(total=200369070080, available=139315040256, percent=30.5, used=59022864384, free=64076627968, active=7083077632, inactive=126705561600, buffers=80834560, cached=77188743168, shared=345886720, slab=557928448))
+Retrieved SOMA batch totals: n_soma_batches=21, n_obs=5505024, nnz=5942146049, elapsed=0:05:03
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6590554112, vms=84110319616, shared=877596672, text=3043328, lib=0, data=43227897856, dirty=0, uss=5882757120, pss=6094096384, swap=0), svmem(total=200369070080, available=136851849216, percent=31.7, used=61486055424, free=61613436928, active=7083077632, inactive=129153871872, buffers=80834560, cached=77188743168, shared=345886720, slab=557928448))
+gc: post=(pfullmem(rss=6585798656, vms=80083787776, shared=877596672, text=3043328, lib=0, data=39252873216, dirty=0, uss=5878001664, pss=6089340928, swap=0), svmem(total=200369070080, available=139377152000, percent=30.4, used=58960752640, free=64138739712, active=7083077632, inactive=126640140288, buffers=80834560, cached=77188743168, shared=345886720, slab=557928448))
+Retrieved SOMA batch totals: n_soma_batches=21, n_obs=5505024, nnz=19715018385, elapsed=0:12:28
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6398939136, vms=83210293248, shared=876773376, text=3043328, lib=0, data=42336215040, dirty=0, uss=5666635776, pss=5885438976, swap=0), svmem(total=200369070080, available=138833657856, percent=30.7, used=59504246784, free=63595245568, active=7083077632, inactive=127172063232, buffers=80834560, cached=77188743168, shared=345886720, slab=557928448))
+gc: post=(pfullmem(rss=6396411904, vms=79989067776, shared=876773376, text=3043328, lib=0, data=39158591488, dirty=0, uss=5664104448, pss=5882907648, swap=0), svmem(total=200369070080, available=139435974656, percent=30.4, used=58901929984, free=64197562368, active=7083077632, inactive=126574182400, buffers=80834560, cached=77188743168, shared=345886720, slab=557928448))
+Retrieved SOMA batch totals: n_soma_batches=21, n_obs=5505024, nnz=8003212595, elapsed=0:06:30
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=42150055936, vms=144957034496, shared=852590592, text=3043328, lib=0, data=102809018368, dirty=0, uss=41446789120, pss=41654751232, swap=0), svmem(total=200369070080, available=139315040256, percent=30.5, used=59022864384, free=64076627968, active=7083077632, inactive=126705561600, buffers=80834560, cached=77188743168, shared=345886720, slab=557928448))
+gc: post=(pfullmem(rss=15347400704, vms=126711422976, shared=852590592, text=3043328, lib=0, data=84976922624, dirty=0, uss=14637649920, pss=14845612032, swap=0), svmem(total=200369070080, available=160648818688, percent=19.8, used=37687906304, free=85174530048, active=7097663488, inactive=105565278208, buffers=80834560, cached=77425799168, shared=345886720, slab=563142656))
+Retrieved SOMA batch totals: n_soma_batches=21, n_obs=5505024, nnz=11682144430, elapsed=0:08:56
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=160815362, elapsed=0:00:09
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=359401900, elapsed=0:00:18
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=446123287, elapsed=0:00:20
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1445911324, elapsed=0:00:51
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=4863270912, vms=70735818752, shared=856383488, text=3043328, lib=0, data=30096211968, dirty=0, uss=4174561280, pss=4376669184, swap=0), svmem(total=200369070080, available=138201702400, percent=31.0, used=60134047744, free=59022540800, active=7459840000, inactive=131390574592, buffers=80891904, cached=81131589632, shared=345886720, slab=566743040))
+gc: post=(pfullmem(rss=4863258624, vms=70601601024, shared=856383488, text=3043328, lib=0, data=29964083200, dirty=0, uss=4174544896, pss=4376652800, swap=0), svmem(total=200369070080, available=138206973952, percent=31.0, used=60128776192, free=59027812352, active=7459840000, inactive=131392802816, buffers=80891904, cached=81131589632, shared=345886720, slab=566743040))
+Retrieved SOMA batch totals: n_soma_batches=22, n_obs=5767168, nnz=6102961411, elapsed=0:05:12
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7223980032, vms=80099966976, shared=877596672, text=3043328, lib=0, data=39338463232, dirty=0, uss=6516908032, pss=6728247296, swap=0), svmem(total=200369070080, available=138201702400, percent=31.0, used=60134047744, free=59022540800, active=7459840000, inactive=131390574592, buffers=80891904, cached=81131589632, shared=345886720, slab=566743040))
+gc: post=(pfullmem(rss=7223599104, vms=77348503552, shared=877596672, text=3043328, lib=0, data=36616482816, dirty=0, uss=6516527104, pss=6727866368, swap=0), svmem(total=200369070080, available=138201812992, percent=31.0, used=60133937152, free=59022651392, active=7459840000, inactive=131395899392, buffers=80891904, cached=81131589632, shared=345886720, slab=566743040))
+Retrieved SOMA batch totals: n_soma_batches=22, n_obs=5767168, nnz=20161141672, elapsed=0:12:48
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6583824384, vms=81457156096, shared=876773376, text=3043328, lib=0, data=40606961664, dirty=0, uss=5851185152, pss=6069988352, swap=0), svmem(total=200369070080, available=138201702400, percent=31.0, used=60134047744, free=59022540800, active=7459840000, inactive=131390574592, buffers=80891904, cached=81131589632, shared=345886720, slab=566743040))
+gc: post=(pfullmem(rss=6583570432, vms=79712325632, shared=876773376, text=3043328, lib=0, data=38880477184, dirty=0, uss=5850927104, pss=6069730304, swap=0), svmem(total=200369070080, available=138233352192, percent=31.0, used=60102397952, free=59054190592, active=7459840000, inactive=131356676096, buffers=80891904, cached=81131589632, shared=345886720, slab=566743040))
+Retrieved SOMA batch totals: n_soma_batches=22, n_obs=5767168, nnz=8362614495, elapsed=0:06:48
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=42549010432, vms=145039380480, shared=852590592, text=3043328, lib=0, data=103021182976, dirty=0, uss=41842778112, pss=42050740224, swap=0), svmem(total=200369070080, available=138203029504, percent=31.0, used=60132720640, free=59023867904, active=7459840000, inactive=131392802816, buffers=80891904, cached=81131589632, shared=345886720, slab=566743040))
+gc: post=(pfullmem(rss=15401013248, vms=142832787456, shared=852590592, text=3043328, lib=0, data=100893798400, dirty=0, uss=14687985664, pss=14895947776, swap=0), svmem(total=200369070080, available=159616999424, percent=20.3, used=38717255680, free=80201179136, active=7476613120, inactive=110165585920, buffers=80891904, cached=81369743360, shared=345886720, slab=569532416))
+Retrieved SOMA batch totals: n_soma_batches=22, n_obs=5767168, nnz=13128055754, elapsed=0:09:47
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=102969091, elapsed=0:00:05
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=360199402, elapsed=0:00:16
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=522606916, elapsed=0:00:21
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1446191469, elapsed=0:00:50
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=4433326080, vms=69821267968, shared=856383488, text=3043328, lib=0, data=29306552320, dirty=0, uss=3744886784, pss=3947039744, swap=0), svmem(total=200369070080, available=138580779008, percent=30.8, used=59752435712, free=55493570560, active=7831965696, inactive=134500282368, buffers=80957440, cached=85042106368, shared=345886720, slab=576331776))
+gc: post=(pfullmem(rss=4433203200, vms=68747526144, shared=856383488, text=3043328, lib=0, data=28253192192, dirty=0, uss=3744755712, pss=3946908672, swap=0), svmem(total=200369070080, available=138647228416, percent=30.8, used=59685986304, free=55560019968, active=7831965696, inactive=134436691968, buffers=80957440, cached=85042106368, shared=345886720, slab=576331776))
+Retrieved SOMA batch totals: n_soma_batches=23, n_obs=6029312, nnz=6205930502, elapsed=0:05:17
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6564114432, vms=82311979008, shared=876773376, text=3043328, lib=0, data=41492066304, dirty=0, uss=5831835648, pss=6050679808, swap=0), svmem(total=200369070080, available=138580779008, percent=30.8, used=59752435712, free=55493570560, active=7831965696, inactive=134500282368, buffers=80957440, cached=85042106368, shared=345886720, slab=576331776))
+gc: post=(pfullmem(rss=6498209792, vms=79896059904, shared=876773376, text=3043328, lib=0, data=39108653056, dirty=0, uss=5765931008, pss=5984775168, swap=0), svmem(total=200369070080, available=138688741376, percent=30.8, used=59644473344, free=55601532928, active=7831965696, inactive=134363111424, buffers=80957440, cached=85042106368, shared=345886720, slab=576331776))
+Retrieved SOMA batch totals: n_soma_batches=23, n_obs=6029312, nnz=8722813897, elapsed=0:07:04
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7923585024, vms=85612748800, shared=877596672, text=3043328, lib=0, data=44955750400, dirty=0, uss=7215648768, pss=7427033088, swap=0), svmem(total=200369070080, available=138580779008, percent=30.8, used=59752435712, free=55493570560, active=7831965696, inactive=134500282368, buffers=80957440, cached=85042106368, shared=345886720, slab=576331776))
+gc: post=(pfullmem(rss=7923318784, vms=83800809472, shared=877596672, text=3043328, lib=0, data=43171131392, dirty=0, uss=7215382528, pss=7426766848, swap=0), svmem(total=200369070080, available=138693386240, percent=30.8, used=59639828480, free=55606177792, active=7831965696, inactive=134357852160, buffers=80957440, cached=85042106368, shared=345886720, slab=576331776))
+Retrieved SOMA batch totals: n_soma_batches=23, n_obs=6029312, nnz=20683748588, elapsed=0:13:09
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=41877241856, vms=164976103424, shared=852590592, text=3043328, lib=0, data=122713575424, dirty=0, uss=41174265856, pss=41382268928, swap=0), svmem(total=200369070080, available=138725179392, percent=30.8, used=59608035328, free=55637970944, active=7831965696, inactive=134355058688, buffers=80957440, cached=85042106368, shared=345886720, slab=576331776))
+gc: post=(pfullmem(rss=15441477632, vms=145992294400, shared=852590592, text=3043328, lib=0, data=104082382848, dirty=0, uss=14731894784, pss=14939897856, swap=0), svmem(total=200369070080, available=158997753856, percent=20.6, used=39330217984, free=75664252928, active=7855116288, inactive=114269388800, buffers=80957440, cached=85293641728, shared=345886720, slab=579555328))
+Retrieved SOMA batch totals: n_soma_batches=23, n_obs=6029312, nnz=14574247223, elapsed=0:10:37
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=254782504, elapsed=0:00:13
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=410864633, elapsed=0:00:20
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=599540654, elapsed=0:00:25
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=1331323702, elapsed=0:00:49
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=5612756992, vms=73803935744, shared=856383488, text=3043328, lib=0, data=33441374208, dirty=0, uss=4924383232, pss=5126536192, swap=0), svmem(total=200369070080, available=126210248704, percent=37.0, used=72118444032, free=38984421376, active=8227606528, inactive=150570205184, buffers=81022976, cached=89185181696, shared=345886720, slab=585953280))
+gc: post=(pfullmem(rss=5612711936, vms=73468391424, shared=856383488, text=3043328, lib=0, data=33110179840, dirty=0, uss=4924329984, pss=5126482944, swap=0), svmem(total=200369070080, available=126210248704, percent=37.0, used=72118444032, free=38984421376, active=8227606528, inactive=150570205184, buffers=81022976, cached=89185181696, shared=345886720, slab=585953280))
+Retrieved SOMA batch totals: n_soma_batches=24, n_obs=6291456, nnz=6460713006, elapsed=0:05:30
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7021424640, vms=81887727616, shared=876773376, text=3043328, lib=0, data=41079132160, dirty=0, uss=6288457728, pss=6507301888, swap=0), svmem(total=200369070080, available=126210248704, percent=37.0, used=72118444032, free=38984421376, active=8227606528, inactive=150570205184, buffers=81022976, cached=89185181696, shared=345886720, slab=585953280))
+gc: post=(pfullmem(rss=7021387776, vms=81686401024, shared=876773376, text=3043328, lib=0, data=40883036160, dirty=0, uss=6288420864, pss=6507265024, swap=0), svmem(total=200369070080, available=126249734144, percent=37.0, used=72078958592, free=39023906816, active=8227606528, inactive=150527885312, buffers=81022976, cached=89185181696, shared=345886720, slab=585953280))
+Retrieved SOMA batch totals: n_soma_batches=24, n_obs=6291456, nnz=9133678530, elapsed=0:07:24
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=20231245824, vms=96371478528, shared=877596672, text=3043328, lib=0, data=55463411712, dirty=0, uss=19530223616, pss=19741607936, swap=0), svmem(total=200369070080, available=126210248704, percent=37.0, used=72118444032, free=38984421376, active=8227606528, inactive=150570205184, buffers=81022976, cached=89185181696, shared=345886720, slab=585953280))
+gc: post=(pfullmem(rss=8331476992, vms=89333047296, shared=877596672, text=3043328, lib=0, data=48635514880, dirty=0, uss=7624421376, pss=7835805696, swap=0), svmem(total=200369070080, available=153118306304, percent=23.6, used=45209325568, free=65882750976, active=8232910848, inactive=123665920000, buffers=81022976, cached=89195970560, shared=345886720, slab=587542528))
+Retrieved SOMA batch totals: n_soma_batches=24, n_obs=6291456, nnz=21283289242, elapsed=0:13:34
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=40257822720, vms=155618217984, shared=852590592, text=3043328, lib=0, data=113535209472, dirty=0, uss=39553454080, pss=39761457152, swap=0), svmem(total=200369070080, available=126210248704, percent=37.0, used=72118444032, free=38984421376, active=8227606528, inactive=150570205184, buffers=81022976, cached=89185181696, shared=345886720, slab=585953280))
+gc: post=(pfullmem(rss=14512201728, vms=137037062144, shared=852590592, text=3043328, lib=0, data=95289028608, dirty=0, uss=13802008576, pss=14010011648, swap=0), svmem(total=200369070080, available=159168684032, percent=20.6, used=39158054912, free=71787663360, active=8246267904, inactive=117769261056, buffers=81022976, cached=89342328832, shared=345886720, slab=587931648))
+Retrieved SOMA batch totals: n_soma_batches=24, n_obs=6291456, nnz=15905570925, elapsed=0:11:26
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=207863087, elapsed=0:00:10
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=507154193, elapsed=0:00:23
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=544907330, elapsed=0:00:24
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=590563610, elapsed=0:00:25
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=5384679424, vms=82439516160, shared=876773376, text=3043328, lib=0, data=41599238144, dirty=0, uss=4652310528, pss=4871154688, swap=0), svmem(total=200369070080, available=151992152064, percent=24.1, used=46333665280, free=61889036288, active=8490934272, inactive=127444013056, buffers=81063936, cached=92065304576, shared=345886720, slab=590929920))
+gc: post=(pfullmem(rss=5384642560, vms=82238189568, shared=876773376, text=3043328, lib=0, data=41399472128, dirty=0, uss=4652273664, pss=4871117824, swap=0), svmem(total=200369070080, available=152384077824, percent=23.9, used=45941739520, free=62280962048, active=8490934272, inactive=127050203136, buffers=81063936, cached=92065304576, shared=345886720, slab=590962688))
+Retrieved SOMA batch totals: n_soma_batches=25, n_obs=6553600, nnz=9341541617, elapsed=0:07:34
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7724646400, vms=91480817664, shared=877596672, text=3043328, lib=0, data=50806243328, dirty=0, uss=7016996864, pss=7228381184, swap=0), svmem(total=200369070080, available=151992152064, percent=24.1, used=46333665280, free=61889036288, active=8490934272, inactive=127444013056, buffers=81063936, cached=92065304576, shared=345886720, slab=590929920))
+gc: post=(pfullmem(rss=7724490752, vms=90272858112, shared=877596672, text=3043328, lib=0, data=49616171008, dirty=0, uss=7016841216, pss=7228225536, swap=0), svmem(total=200369070080, available=152525488128, percent=23.9, used=45800845312, free=62421856256, active=8490934272, inactive=126912921600, buffers=81063936, cached=92065304576, shared=345886720, slab=590962688))
+Retrieved SOMA batch totals: n_soma_batches=25, n_obs=6553600, nnz=21790443435, elapsed=0:13:57
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=13113131008, vms=81093218304, shared=856383488, text=3043328, lib=0, data=40638615552, dirty=0, uss=12425113600, pss=12627266560, swap=0), svmem(total=200369070080, available=151992152064, percent=24.1, used=46333665280, free=61889036288, active=8490934272, inactive=127444013056, buffers=81063936, cached=92065304576, shared=345886720, slab=590929920))
+gc: post=(pfullmem(rss=10601660416, vms=77268013056, shared=856383488, text=3043328, lib=0, data=36878622720, dirty=0, uss=9913638912, pss=10115791872, swap=0), svmem(total=200369070080, available=156117438464, percent=22.1, used=42208378880, free=66014318592, active=8490934272, inactive=123309473792, buffers=81063936, cached=92065308672, shared=345886720, slab=592560128))
+Retrieved SOMA batch totals: n_soma_batches=25, n_obs=6553600, nnz=7005620336, elapsed=0:05:54
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=21169381376, vms=136004030464, shared=852590592, text=3043328, lib=0, data=94138368000, dirty=0, uss=20465803264, pss=20673806336, swap=0), svmem(total=200369070080, available=151992152064, percent=24.1, used=46333665280, free=61889036288, active=8490934272, inactive=127444013056, buffers=81063936, cached=92065304576, shared=345886720, slab=590929920))
+gc: post=(pfullmem(rss=8574885888, vms=122120495104, shared=852590592, text=3043328, lib=0, data=80558522368, dirty=0, uss=7865085952, pss=8073089024, swap=0), svmem(total=200369070080, available=168482361344, percent=15.9, used=29842563072, free=78339125248, active=8494546944, inactive=110994579456, buffers=81063936, cached=92106317824, shared=345886720, slab=593522688))
+Retrieved SOMA batch totals: n_soma_batches=25, n_obs=6553600, nnz=16496134535, elapsed=0:11:51
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=207818488, elapsed=0:00:11
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=301833283, elapsed=0:00:16
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=561149391, elapsed=0:00:24
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=651238161, elapsed=0:00:26
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=6036324352, vms=76441665536, shared=856383488, text=3043328, lib=0, data=36066885632, dirty=0, uss=5347741696, pss=5549894656, swap=0), svmem(total=200369070080, available=148283076608, percent=26.0, used=50039590912, free=55436787712, active=8716754944, inactive=133663186944, buffers=81121280, cached=94811570176, shared=345886720, slab=598159360))
+gc: post=(pfullmem(rss=6035808256, vms=73757310976, shared=856383488, text=3043328, lib=0, data=33431285760, dirty=0, uss=5347225600, pss=5549378560, swap=0), svmem(total=200369070080, available=150651400192, percent=24.8, used=47671226368, free=57805070336, active=8716754944, inactive=131303288832, buffers=81121280, cached=94811652096, shared=345886720, slab=597741568))
+Retrieved SOMA batch totals: n_soma_batches=26, n_obs=6815744, nnz=7307453619, elapsed=0:06:10
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=5399257088, vms=80995917824, shared=876773376, text=3043328, lib=0, data=40183500800, dirty=0, uss=4666900480, pss=4885744640, swap=0), svmem(total=200369070080, available=148169830400, percent=26.1, used=50159128576, free=55317250048, active=8716754944, inactive=133778530304, buffers=81121280, cached=94811570176, shared=345886720, slab=598159360))
+gc: post=(pfullmem(rss=5399257088, vms=80995917824, shared=876773376, text=3043328, lib=0, data=40183500800, dirty=0, uss=4666904576, pss=4885748736, swap=0), svmem(total=200369070080, available=150683672576, percent=24.8, used=47638953984, free=57837342720, active=8716754944, inactive=131267739648, buffers=81121280, cached=94811652096, shared=345886720, slab=597741568))
+Retrieved SOMA batch totals: n_soma_batches=26, n_obs=6815744, nnz=9549360105, elapsed=0:07:45
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=15432224768, vms=99162505216, shared=877596672, text=3043328, lib=0, data=58527522816, dirty=0, uss=14725001216, pss=14936385536, swap=0), svmem(total=200369070080, available=150650884096, percent=24.8, used=47671742464, free=57804554240, active=8716754944, inactive=131303804928, buffers=81121280, cached=94811652096, shared=345886720, slab=597741568))
+gc: post=(pfullmem(rss=15388835840, vms=96746586112, shared=877596672, text=3043328, lib=0, data=56130854912, dirty=0, uss=14681612288, pss=14892996608, swap=0), svmem(total=200369070080, available=150954627072, percent=24.7, used=47367999488, free=58108293120, active=8716754944, inactive=130987016192, buffers=81121280, cached=94811656192, shared=345886720, slab=598806528))
+Retrieved SOMA batch totals: n_soma_batches=26, n_obs=6815744, nnz=22351592826, elapsed=0:14:21
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=21866471424, vms=134949064704, shared=852590592, text=3043328, lib=0, data=93241274368, dirty=0, uss=21163630592, pss=21371633664, swap=0), svmem(total=200369070080, available=150650884096, percent=24.8, used=47671742464, free=57804554240, active=8716754944, inactive=131303804928, buffers=81121280, cached=94811652096, shared=345886720, slab=597741568))
+gc: post=(pfullmem(rss=9056063488, vms=122407706624, shared=852590592, text=3043328, lib=0, data=80910458880, dirty=0, uss=8346087424, pss=8554090496, swap=0), svmem(total=200369070080, available=169560297472, percent=15.4, used=28762157056, free=76614254592, active=8720896000, inactive=112483930112, buffers=81121280, cached=94911537152, shared=345886720, slab=599314432))
+Retrieved SOMA batch totals: n_soma_batches=26, n_obs=6815744, nnz=17147372696, elapsed=0:12:17
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=207529599, elapsed=0:00:11
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=299855491, elapsed=0:00:15
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=357035979, elapsed=0:00:17
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=379350309, elapsed=0:00:18
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=6598950912, vms=73676345344, shared=856383488, text=3043328, lib=0, data=33438183424, dirty=0, uss=5908213760, pss=6110366720, swap=0), svmem(total=200369070080, available=174359109632, percent=13.0, used=23961190400, free=79576834048, active=8887062528, inactive=109399126016, buffers=81162240, cached=96749883392, shared=345886720, slab=602066944))
+gc: post=(pfullmem(rss=6574690304, vms=73005256704, shared=856383488, text=3043328, lib=0, data=32780685312, dirty=0, uss=5883953152, pss=6086106112, swap=0), svmem(total=200369070080, available=174389043200, percent=13.0, used=23931256832, free=79606767616, active=8887062528, inactive=109370503168, buffers=81162240, cached=96749883392, shared=345886720, slab=602066944))
+Retrieved SOMA batch totals: n_soma_batches=27, n_obs=7077888, nnz=7686803928, elapsed=0:06:28
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=5366980608, vms=80576815104, shared=876773376, text=3043328, lib=0, data=39777116160, dirty=0, uss=4632346624, pss=4851190784, swap=0), svmem(total=200369070080, available=174359109632, percent=13.0, used=23961190400, free=79576834048, active=8887062528, inactive=109399126016, buffers=81162240, cached=96749883392, shared=345886720, slab=602066944))
+gc: post=(pfullmem(rss=5362368512, vms=77221371904, shared=876773376, text=3043328, lib=0, data=36479139840, dirty=0, uss=4627730432, pss=4846574592, swap=0), svmem(total=200369070080, available=174381142016, percent=13.0, used=23939158016, free=79598866432, active=8887062528, inactive=109376794624, buffers=81162240, cached=96749883392, shared=345886720, slab=602066944))
+Retrieved SOMA batch totals: n_soma_batches=27, n_obs=7077888, nnz=9756889704, elapsed=0:07:56
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6648754176, vms=93505159168, shared=877596672, text=3043328, lib=0, data=52921835520, dirty=0, uss=5941014528, pss=6152398848, swap=0), svmem(total=200369070080, available=174359109632, percent=13.0, used=23961190400, free=79576834048, active=8887062528, inactive=109399126016, buffers=81162240, cached=96749883392, shared=345886720, slab=602066944))
+gc: post=(pfullmem(rss=6648668160, vms=92834070528, shared=877596672, text=3043328, lib=0, data=52259618816, dirty=0, uss=5940928512, pss=6152312832, swap=0), svmem(total=200369070080, available=174415261696, percent=13.0, used=23905038336, free=79632986112, active=8887062528, inactive=109332385792, buffers=81162240, cached=96749883392, shared=345886720, slab=602066944))
+Retrieved SOMA batch totals: n_soma_batches=27, n_obs=7077888, nnz=22708628805, elapsed=0:14:38
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6465839104, vms=122887077888, shared=852590592, text=3043328, lib=0, data=81347219456, dirty=0, uss=5755920384, pss=5963923456, swap=0), svmem(total=200369070080, available=174359109632, percent=13.0, used=23961190400, free=79576834048, active=8887062528, inactive=109399126016, buffers=81162240, cached=96749883392, shared=345886720, slab=602066944))
+gc: post=(pfullmem(rss=6465658880, vms=121410682880, shared=852590592, text=3043328, lib=0, data=79886086144, dirty=0, uss=5755740160, pss=5963743232, swap=0), svmem(total=200369070080, available=174690676736, percent=12.8, used=23629623296, free=79908401152, active=8887062528, inactive=109048614912, buffers=81162240, cached=96749883392, shared=345886720, slab=603672576))
+Retrieved SOMA batch totals: n_soma_batches=27, n_obs=7077888, nnz=17447228187, elapsed=0:12:32
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=208018161, elapsed=0:00:11
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=244929290, elapsed=0:00:14
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=421981228, elapsed=0:00:19
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=401966004, elapsed=0:00:19
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=6843547648, vms=76945903616, shared=856383488, text=3043328, lib=0, data=36751441920, dirty=0, uss=6154240000, pss=6356392960, swap=0), svmem(total=200369070080, available=173317328896, percent=13.5, used=25000693760, free=76454072320, active=9060970496, inactive=112335212544, buffers=81235968, cached=98833068032, shared=345886720, slab=607703040))
+gc: post=(pfullmem(rss=6843248640, vms=75066855424, shared=856383488, text=3043328, lib=0, data=34899542016, dirty=0, uss=6153940992, pss=6356093952, swap=0), svmem(total=200369070080, available=173349658624, percent=13.5, used=24968364032, free=76486402048, active=9060970496, inactive=112307343360, buffers=81235968, cached=98833068032, shared=345886720, slab=607703040))
+Retrieved SOMA batch totals: n_soma_batches=28, n_obs=7340032, nnz=8088769932, elapsed=0:06:47
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=5328621568, vms=79276691456, shared=876773376, text=3043328, lib=0, data=38578745344, dirty=0, uss=4595470336, pss=4814314496, swap=0), svmem(total=200369070080, available=173317328896, percent=13.5, used=25000693760, free=76454072320, active=9060970496, inactive=112335212544, buffers=81235968, cached=98833068032, shared=345886720, slab=607703040))
+gc: post=(pfullmem(rss=5300510720, vms=79209582592, shared=876773376, text=3043328, lib=0, data=38511636480, dirty=0, uss=4567355392, pss=4786199552, swap=0), svmem(total=200369070080, available=173347594240, percent=13.5, used=24970428416, free=76484337664, active=9060970496, inactive=112309407744, buffers=81235968, cached=98833068032, shared=345886720, slab=607703040))
+Retrieved SOMA batch totals: n_soma_batches=28, n_obs=7340032, nnz=9964907865, elapsed=0:08:07
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7304658944, vms=93020192768, shared=877596672, text=3043328, lib=0, data=52398505984, dirty=0, uss=6597840896, pss=6809225216, swap=0), svmem(total=200369070080, available=173317328896, percent=13.5, used=25000693760, free=76454072320, active=9060970496, inactive=112335212544, buffers=81235968, cached=98833068032, shared=345886720, slab=607703040))
+gc: post=(pfullmem(rss=7304372224, vms=92617539584, shared=877596672, text=3043328, lib=0, data=52005265408, dirty=0, uss=6597554176, pss=6808938496, swap=0), svmem(total=200369070080, available=173446922240, percent=13.4, used=24871100416, free=76583661568, active=9060970496, inactive=112195883008, buffers=81235968, cached=98833072128, shared=345886720, slab=607703040))
+Retrieved SOMA batch totals: n_soma_batches=28, n_obs=7340032, nnz=23130610033, elapsed=0:14:57
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6628134912, vms=122987683840, shared=852590592, text=3043328, lib=0, data=81425063936, dirty=0, uss=5918466048, pss=6126469120, swap=0), svmem(total=200369070080, available=173317328896, percent=13.5, used=25000693760, free=76454072320, active=9060970496, inactive=112335212544, buffers=81235968, cached=98833068032, shared=345886720, slab=607703040))
+gc: post=(pfullmem(rss=6627844096, vms=121108635648, shared=852590592, text=3043328, lib=0, data=79578365952, dirty=0, uss=5918175232, pss=6126178304, swap=0), svmem(total=200369070080, available=173876215808, percent=13.2, used=24441806848, free=77012955136, active=9060970496, inactive=111744823296, buffers=81235968, cached=98833072128, shared=345886720, slab=609468416))
+Retrieved SOMA batch totals: n_soma_batches=28, n_obs=7340032, nnz=17692157477, elapsed=0:12:46
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=279839032, elapsed=0:00:16
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=283141043, elapsed=0:00:17
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=455035789, elapsed=0:00:21
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=426513624, elapsed=0:00:22
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=5884162048, vms=79047004160, shared=876773376, text=3043328, lib=0, data=38413082624, dirty=0, uss=5151485952, pss=5370330112, swap=0), svmem(total=200369070080, available=172246876160, percent=14.0, used=26068905984, free=73039663104, active=9252089856, inactive=115549728768, buffers=81276928, cached=101179224064, shared=345886720, slab=613285888))
+gc: post=(pfullmem(rss=5884063744, vms=78308806656, shared=876773376, text=3043328, lib=0, data=37683228672, dirty=0, uss=5151383552, pss=5370227712, swap=0), svmem(total=200369070080, available=172249456640, percent=14.0, used=26066325504, free=73042243584, active=9252089856, inactive=115548696576, buffers=81276928, cached=101179224064, shared=345886720, slab=613285888))
+Retrieved SOMA batch totals: n_soma_batches=29, n_obs=7602176, nnz=10244746897, elapsed=0:08:23
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7276429312, vms=78647492608, shared=856383488, text=3043328, lib=0, data=38536777728, dirty=0, uss=6587162624, pss=6789315584, swap=0), svmem(total=200369070080, available=172246876160, percent=14.0, used=26068905984, free=73039663104, active=9252089856, inactive=115549728768, buffers=81276928, cached=101179224064, shared=345886720, slab=613285888))
+gc: post=(pfullmem(rss=7276429312, vms=78647492608, shared=856383488, text=3043328, lib=0, data=38536777728, dirty=0, uss=6587162624, pss=6789315584, swap=0), svmem(total=200369070080, available=172249456640, percent=14.0, used=26066325504, free=73042243584, active=9252089856, inactive=115548688384, buffers=81276928, cached=101179224064, shared=345886720, slab=613285888))
+Retrieved SOMA batch totals: n_soma_batches=29, n_obs=7602176, nnz=8543805721, elapsed=0:07:08
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7191715840, vms=96615317504, shared=877596672, text=3043328, lib=0, data=56033832960, dirty=0, uss=6483808256, pss=6695192576, swap=0), svmem(total=200369070080, available=172246876160, percent=14.0, used=26068905984, free=73039663104, active=9252089856, inactive=115549728768, buffers=81276928, cached=101179224064, shared=345886720, slab=613285888))
+gc: post=(pfullmem(rss=7191199744, vms=92723003392, shared=877596672, text=3043328, lib=0, data=52180684800, dirty=0, uss=6483292160, pss=6694676480, swap=0), svmem(total=200369070080, available=172341379072, percent=14.0, used=25974398976, free=73134166016, active=9252089856, inactive=115445563392, buffers=81276928, cached=101179228160, shared=345886720, slab=613285888))
+Retrieved SOMA batch totals: n_soma_batches=29, n_obs=7602176, nnz=23557123657, elapsed=0:15:19
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6816350208, vms=120209514496, shared=852590592, text=3043328, lib=0, data=78739775488, dirty=0, uss=6106746880, pss=6314749952, swap=0), svmem(total=200369070080, available=172246876160, percent=14.0, used=26068905984, free=73039663104, active=9252089856, inactive=115549728768, buffers=81276928, cached=101179224064, shared=345886720, slab=613285888))
+gc: post=(pfullmem(rss=6816071680, vms=117994921984, shared=852590592, text=3043328, lib=0, data=76560699392, dirty=0, uss=6106468352, pss=6314471424, swap=0), svmem(total=200369070080, available=172638117888, percent=13.8, used=25677660160, free=73430904832, active=9252089856, inactive=115125063680, buffers=81276928, cached=101179228160, shared=345886720, slab=614883328))
+Retrieved SOMA batch totals: n_soma_batches=29, n_obs=7602176, nnz=17975298520, elapsed=0:13:03
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=159604356, elapsed=0:00:08
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=445658780, elapsed=0:00:22
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=515944757, elapsed=0:00:25
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=575749108, elapsed=0:00:26
+Running GC...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=4860420096, vms=77108224000, shared=856383488, text=3043328, lib=0, data=36992876544, dirty=0, uss=4171448320, pss=4373591040, swap=0), svmem(total=200369070080, available=145385431040, percent=27.4, used=52927537152, free=43376599040, active=9476620288, inactive=144932962304, buffers=81367040, cached=103983566848, shared=345886720, slab=619069440))
+gc: post=(pfullmem(rss=4859850752, vms=73685671936, shared=856383488, text=3043328, lib=0, data=33622835200, dirty=0, uss=4170878976, pss=4373021696, swap=0), svmem(total=200369070080, available=145629102080, percent=27.3, used=52683866112, free=43620270080, active=9476620288, inactive=144694956032, buffers=81367040, cached=103983566848, shared=345886720, slab=619069440))
+Retrieved SOMA batch totals: n_soma_batches=30, n_obs=7864320, nnz=8703410077, elapsed=0:07:16
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=11161939968, vms=96274980864, shared=877596672, text=3043328, lib=0, data=55822266368, dirty=0, uss=10453172224, pss=10664559616, swap=0), svmem(total=200369070080, available=145385431040, percent=27.4, used=52927537152, free=43376599040, active=9476620288, inactive=144932962304, buffers=81367040, cached=103983566848, shared=345886720, slab=619069440))
+gc: post=(pfullmem(rss=10597466112, vms=95268347904, shared=877596672, text=3043328, lib=0, data=54828232704, dirty=0, uss=9888698368, pss=10100085760, swap=0), svmem(total=200369070080, available=147335360512, percent=26.5, used=50977607680, free=45326524416, active=9476620288, inactive=142982729728, buffers=81367040, cached=103983570944, shared=345886720, slab=619585536))
+Retrieved SOMA batch totals: n_soma_batches=30, n_obs=7864320, nnz=24073068414, elapsed=0:15:44
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=20344897536, vms=90376577024, shared=876773376, text=3043328, lib=0, data=49681637376, dirty=0, uss=19620069376, pss=19838911488, swap=0), svmem(total=200369070080, available=145385431040, percent=27.4, used=52927537152, free=43376599040, active=9476620288, inactive=144932962304, buffers=81367040, cached=103983566848, shared=345886720, slab=619069440))
+gc: post=(pfullmem(rss=8238682112, vms=85490487296, shared=876773376, text=3043328, lib=0, data=44907831296, dirty=0, uss=7506194432, pss=7725036544, swap=0), svmem(total=200369070080, available=170349432832, percent=15.0, used=27963502592, free=68340563968, active=9476620288, inactive=119979757568, buffers=81367040, cached=103983636480, shared=345886720, slab=620630016))
+Retrieved SOMA batch totals: n_soma_batches=30, n_obs=7864320, nnz=10820496005, elapsed=0:08:49
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=17587187712, vms=128836448256, shared=852590592, text=3043328, lib=0, data=87314026496, dirty=0, uss=16884047872, pss=17092048896, swap=0), svmem(total=200369070080, available=145385431040, percent=27.4, used=52927537152, free=43376599040, active=9476620288, inactive=144932962304, buffers=81367040, cached=103983566848, shared=345886720, slab=619069440))
+gc: post=(pfullmem(rss=7378030592, vms=121126928384, shared=852590592, text=3043328, lib=0, data=79753146368, dirty=0, uss=6668582912, pss=6876583936, swap=0), svmem(total=200369070080, available=170306260992, percent=15.0, used=28006158336, free=68297392128, active=9476620288, inactive=120019496960, buffers=81367040, cached=103984152576, shared=345886720, slab=620630016))
+Retrieved SOMA batch totals: n_soma_batches=30, n_obs=7864320, nnz=18420957300, elapsed=0:13:25
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=132028523, elapsed=0:00:06
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=303222001, elapsed=0:00:15
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=556861170, elapsed=0:00:23
+Retrieved SOMA batch: n_soma_batches=1, n_obs=262144, nnz=537071490, elapsed=0:00:23
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+gc:  pre=(pfullmem(rss=4682588160, vms=72796078080, shared=856383488, text=3043328, lib=0, data=32736096256, dirty=0, uss=3993882624, pss=4196025344, swap=0), svmem(total=200369070080, available=151166570496, percent=24.6, used=47143092224, free=46679597056, active=9688682496, inactive=141432659968, buffers=81457152, cached=106464923648, shared=345886720, slab=626143232))
+gc: post=(pfullmem(rss=4682477568, vms=71923662848, shared=856383488, text=3043328, lib=0, data=31881453568, dirty=0, uss=3993772032, pss=4195914752, swap=0), svmem(total=200369070080, available=154734858240, percent=22.8, used=43574804480, free=50247884800, active=9688682496, inactive=137867681792, buffers=81457152, cached=106464923648, shared=345886720, slab=626143232))
+Retrieved SOMA batch totals: n_soma_batches=31, n_obs=8126464, nnz=8835438600, elapsed=0:07:22
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6078734336, vms=83178414080, shared=876773376, text=3043328, lib=0, data=42587176960, dirty=0, uss=5344706560, pss=5563548672, swap=0), svmem(total=200369070080, available=152178229248, percent=24.1, used=46131433472, free=47691255808, active=9688682496, inactive=140419915776, buffers=81457152, cached=106464923648, shared=345886720, slab=626143232))
+gc: post=(pfullmem(rss=6078734336, vms=83178414080, shared=876773376, text=3043328, lib=0, data=42587176960, dirty=0, uss=5344710656, pss=5563552768, swap=0), svmem(total=200369070080, available=154787549184, percent=22.7, used=43522113536, free=50300575744, active=9688682496, inactive=137783857152, buffers=81457152, cached=106464923648, shared=345886720, slab=626143232))
+Retrieved SOMA batch totals: n_soma_batches=31, n_obs=8126464, nnz=11123718006, elapsed=0:09:04
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=14112006144, vms=100062212096, shared=877596672, text=3043328, lib=0, data=59595079680, dirty=0, uss=13403906048, pss=13615293440, swap=0), svmem(total=200369070080, available=154734858240, percent=22.8, used=43574804480, free=50247884800, active=9688682496, inactive=137867681792, buffers=81457152, cached=106464923648, shared=345886720, slab=626143232))
+gc: post=(pfullmem(rss=11794382848, vms=92009148416, shared=877596672, text=3043328, lib=0, data=51650846720, dirty=0, uss=11086282752, pss=11297670144, swap=0), svmem(total=200369070080, available=158330257408, percent=21.0, used=39979405312, free=53843279872, active=9688682496, inactive=134252535808, buffers=81457152, cached=106464927744, shared=345886720, slab=627363840))
+Retrieved SOMA batch totals: n_soma_batches=31, n_obs=8126464, nnz=24629929584, elapsed=0:16:07
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=19760476160, vms=128497152000, shared=852590592, text=3043328, lib=0, data=87080226816, dirty=0, uss=19057721344, pss=19265722368, swap=0), svmem(total=200369070080, available=154734858240, percent=22.8, used=43574804480, free=50247884800, active=9688682496, inactive=137867681792, buffers=81457152, cached=106464923648, shared=345886720, slab=626143232))
+gc: post=(pfullmem(rss=8101011456, vms=122062700544, shared=852590592, text=3043328, lib=0, data=80779653120, dirty=0, uss=7391612928, pss=7599613952, swap=0), svmem(total=200369070080, available=171088396288, percent=14.6, used=27221041152, free=66523090944, active=9692479488, inactive=121557786624, buffers=81457152, cached=106543480832, shared=345886720, slab=627777536))
+Retrieved SOMA batch totals: n_soma_batches=31, n_obs=8126464, nnz=18958028790, elapsed=0:13:48
+Retrieving next SOMA batch...
+Retrieved SOMA batch: n_soma_batches=1, n_obs=214596, nnz=212455900, elapsed=0:00:11
+Retrieved SOMA batch: n_soma_batches=1, n_obs=214596, nnz=283006999, elapsed=0:00:15
+Retrieved SOMA batch: n_soma_batches=1, n_obs=214597, nnz=333336491, elapsed=0:00:16
+Retrieved SOMA batch: n_soma_batches=1, n_obs=214597, nnz=510486856, elapsed=0:00:21
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=5285900288, vms=73524584448, shared=856383488, text=3043328, lib=0, data=33460862976, dirty=0, uss=4593684480, pss=4795827200, swap=0), svmem(total=200369070080, available=173337767936, percent=13.5, used=24968323072, free=66746359808, active=9898135552, inactive=121178177536, buffers=81514496, cached=108572872704, shared=345886720, slab=632131584))
+gc: post=(pfullmem(rss=5279457280, vms=72383733760, shared=856383488, text=3043328, lib=0, data=32332959744, dirty=0, uss=4587241472, pss=4789384192, swap=0), svmem(total=200369070080, available=173352292352, percent=13.5, used=24953798656, free=66760884224, active=9898135552, inactive=121165275136, buffers=81514496, cached=108572872704, shared=345886720, slab=632131584))
+Retrieved SOMA batch totals: n_soma_batches=32, n_obs=8341060, nnz=9047894500, elapsed=0:07:33
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=5933797376, vms=81408180224, shared=876773376, text=3043328, lib=0, data=41035075584, dirty=0, uss=5199720448, pss=5418562560, swap=0), svmem(total=200369070080, available=173337767936, percent=13.5, used=24968323072, free=66746359808, active=9898135552, inactive=121178177536, buffers=81514496, cached=108572872704, shared=345886720, slab=632131584))
+gc: post=(pfullmem(rss=5927149568, vms=79059369984, shared=876773376, text=3043328, lib=0, data=38726307840, dirty=0, uss=5193064448, pss=5411906560, swap=0), svmem(total=200369070080, available=173338910720, percent=13.5, used=24967176192, free=66747502592, active=9898135552, inactive=121183338496, buffers=81514496, cached=108572876800, shared=345886720, slab=632131584))
+Retrieved SOMA batch totals: n_soma_batches=32, n_obs=8341060, nnz=11406725005, elapsed=0:09:19
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=7920762880, vms=95698509824, shared=877596672, text=3043328, lib=0, data=55380107264, dirty=0, uss=7212851200, pss=7424238592, swap=0), svmem(total=200369070080, available=173337767936, percent=13.5, used=24968323072, free=66746359808, active=9898135552, inactive=121178177536, buffers=81514496, cached=108572872704, shared=345886720, slab=632131584))
+gc: post=(pfullmem(rss=7920660480, vms=95161638912, shared=877596672, text=3043328, lib=0, data=54857883648, dirty=0, uss=7212748800, pss=7424136192, swap=0), svmem(total=200369070080, available=173328330752, percent=13.5, used=24977756160, free=66736922624, active=9898135552, inactive=121189789696, buffers=81514496, cached=108572876800, shared=345886720, slab=632131584))
+Retrieved SOMA batch totals: n_soma_batches=32, n_obs=8341061, nnz=25140416440, elapsed=0:16:28
+Retrieving next SOMA batch...
+gc:  pre=(pfullmem(rss=6932418560, vms=121778143232, shared=852590592, text=3043328, lib=0, data=80537284608, dirty=0, uss=6222553088, pss=6430554112, swap=0), svmem(total=200369070080, available=173337767936, percent=13.5, used=24968323072, free=66746359808, active=9898135552, inactive=121178177536, buffers=81514496, cached=108572872704, shared=345886720, slab=632131584))
+gc: post=(pfullmem(rss=6932262912, vms=120503074816, shared=852590592, text=3043328, lib=0, data=79286136832, dirty=0, uss=6222397440, pss=6430398464, swap=0), svmem(total=200369070080, available=173324980224, percent=13.5, used=24981110784, free=66733568000, active=9898135552, inactive=121193312256, buffers=81514496, cached=108572876800, shared=345886720, slab=632131584))
+Retrieved SOMA batch totals: n_soma_batches=32, n_obs=8341061, nnz=19291365281, elapsed=0:14:04
+Retrieving next SOMA batch...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Running GC...
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Running GC...
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=3589087232, vms=70686179328, shared=856383488, text=3043328, lib=0, data=30635405312, dirty=0, uss=2896871424, pss=3099014144, swap=0), svmem(total=200369070080, available=183962300416, percent=8.2, used=14339993600, free=77375471616, active=9898160128, inactive=110580310016, buffers=81539072, cached=108572065792, shared=345886720, slab=631201792))
+gc: post=(pfullmem(rss=3589087232, vms=70686179328, shared=856383488, text=3043328, lib=0, data=30635405312, dirty=0, uss=2896871424, pss=3099014144, swap=0), svmem(total=200369070080, available=183962300416, percent=8.2, used=14339993600, free=77375471616, active=9898160128, inactive=110580310016, buffers=81539072, cached=108572065792, shared=345886720, slab=631201792))
+gc:  pre=(pfullmem(rss=3693322240, vms=76828463104, shared=876773376, text=3043328, lib=0, data=36495400960, dirty=0, uss=2959810560, pss=3178652672, swap=0), svmem(total=200369070080, available=183962300416, percent=8.2, used=14339993600, free=77375471616, active=9898160128, inactive=110580310016, buffers=81539072, cached=108572065792, shared=345886720, slab=631201792))
+gc: post=(pfullmem(rss=3693305856, vms=76694245376, shared=876773376, text=3043328, lib=0, data=36362223616, dirty=0, uss=2959794176, pss=3178636288, swap=0), svmem(total=200369070080, available=183950946304, percent=8.2, used=14351347712, free=77364117504, active=9898160128, inactive=110591623168, buffers=81539072, cached=108572065792, shared=345886720, slab=631201792))
+gc:  pre=(pfullmem(rss=3840618496, vms=91079835648, shared=877596672, text=3043328, lib=0, data=50776080384, dirty=0, uss=3132706816, pss=3344094208, swap=0), svmem(total=200369070080, available=183962300416, percent=8.2, used=14339993600, free=77375471616, active=9898160128, inactive=110580310016, buffers=81539072, cached=108572065792, shared=345886720, slab=631201792))
+gc: post=(pfullmem(rss=3840618496, vms=91079835648, shared=877596672, text=3043328, lib=0, data=50776080384, dirty=0, uss=3132706816, pss=3344094208, swap=0), svmem(total=200369070080, available=183908626432, percent=8.2, used=14393667584, free=77321797632, active=9898160128, inactive=110633533440, buffers=81539072, cached=108572065792, shared=345886720, slab=631201792))
+gc:  pre=(pfullmem(rss=4351778816, vms=117838479360, shared=852590592, text=3043328, lib=0, data=76621541376, dirty=0, uss=3641913344, pss=3849914368, swap=0), svmem(total=200369070080, available=183962300416, percent=8.2, used=14339993600, free=77375471616, active=9898160128, inactive=110580310016, buffers=81539072, cached=108572065792, shared=345886720, slab=631201792))
+gc: post=(pfullmem(rss=4351778816, vms=117838479360, shared=852590592, text=3043328, lib=0, data=76621541376, dirty=0, uss=3641913344, pss=3849914368, swap=0), svmem(total=200369070080, available=183865462784, percent=8.2, used=14436831232, free=77278633984, active=9898160128, inactive=110657646592, buffers=81539072, cached=108572065792, shared=345886720, slab=631201792))
+Running GC...
+Running GC...
+Running GC...
+Running GC...
+Retrieved GC for process psutil.Process(pid=3323, name='python', status='running', started='18:47:57')
+Retrieved GC for process psutil.Process(pid=2214, name='python', status='running', started='18:47:43')
+Retrieved GC for process psutil.Process(pid=3322, name='python', status='running', started='18:47:57')
+Retrieved GC for process psutil.Process(pid=3321, name='python', status='running', started='18:47:57')
+gc:  pre=(pfullmem(rss=3628371968, vms=70710788096, shared=856383488, text=3043328, lib=0, data=30660018176, dirty=0, uss=2939568128, pss=3141710848, swap=0), svmem(total=200369070080, available=183798370304, percent=8.3, used=14503923712, free=77211541504, active=9898160128, inactive=110725263360, buffers=81539072, cached=108572065792, shared=345886720, slab=631685120))
+gc: post=(pfullmem(rss=3628371968, vms=70710788096, shared=856383488, text=3043328, lib=0, data=30660018176, dirty=0, uss=2939568128, pss=3141710848, swap=0), svmem(total=200369070080, available=183795032064, percent=8.3, used=14507253760, free=77208190976, active=9898160128, inactive=110730739712, buffers=81539072, cached=108572086272, shared=345886720, slab=631177216))
+max process memory usage=29.628 GiB
+gc:  pre=(pfullmem(rss=3707899904, vms=75813437440, shared=876773376, text=3043328, lib=0, data=35498053632, dirty=0, uss=2976129024, pss=3194971136, swap=0), svmem(total=200369070080, available=183798370304, percent=8.3, used=14503923712, free=77211541504, active=9898160128, inactive=110725263360, buffers=81539072, cached=108572065792, shared=345886720, slab=631685120))
+gc: post=(pfullmem(rss=3707899904, vms=75813437440, shared=876773376, text=3043328, lib=0, data=35498053632, dirty=0, uss=2976129024, pss=3194971136, swap=0), svmem(total=200369070080, available=183795032064, percent=8.3, used=14507253760, free=77208190976, active=9898160128, inactive=110730739712, buffers=81539072, cached=108572086272, shared=345886720, slab=631177216))
+max process memory usage=22.237 GiB
+gc:  pre=(pfullmem(rss=3865104384, vms=90735898624, shared=877596672, text=3043328, lib=0, data=50434748416, dirty=0, uss=3157635072, pss=3369022464, swap=0), svmem(total=200369070080, available=183798370304, percent=8.3, used=14503923712, free=77211541504, active=9898160128, inactive=110725263360, buffers=81539072, cached=108572065792, shared=345886720, slab=631685120))
+gc: post=(pfullmem(rss=3865104384, vms=90735898624, shared=877596672, text=3043328, lib=0, data=50434748416, dirty=0, uss=3157635072, pss=3369022464, swap=0), svmem(total=200369070080, available=183795032064, percent=8.3, used=14507249664, free=77208190976, active=9898160128, inactive=110730739712, buffers=81539072, cached=108572090368, shared=345886720, slab=631177216))
+max process memory usage=47.684 GiB
+gc:  pre=(pfullmem(rss=4419174400, vms=117628760064, shared=852590592, text=3043328, lib=0, data=76414959616, dirty=0, uss=3708801024, pss=3916802048, swap=0), svmem(total=200369070080, available=183798370304, percent=8.3, used=14503923712, free=77211541504, active=9898160128, inactive=110725263360, buffers=81539072, cached=108572065792, shared=345886720, slab=631685120))
+gc: post=(pfullmem(rss=4419162112, vms=117427433472, shared=852590592, text=3043328, lib=0, data=76215193600, dirty=0, uss=3708776448, pss=3916777472, swap=0), svmem(total=200369070080, available=183795032064, percent=8.3, used=14507249664, free=77208190976, active=9898160128, inactive=110730739712, buffers=81539072, cached=108572090368, shared=345886720, slab=631177216))
+max process memory usage=38.969 GiB
+Epoch 1/1: 100%|██████████| 1/1 [2:42:04<00:00, 9724.25s/it]/home/ubuntu/venv/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/logger_connector/result.py:432: PossibleUserWarning: It is recommended to use `self.log('train_loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+  warning_cache.warn(
+Epoch 1/1: 100%|██████████| 1/1 [2:42:04<00:00, 9724.25s/it, v_num=1, train_loss_step=2.31e+4, train_loss_epoch=1.6e+4]`Trainer.fit` stopped: `max_epochs=1` reached.
+Epoch 1/1: 100%|██████████| 1/1 [2:42:04<00:00, 9724.26s/it, v_num=1, train_loss_step=2.31e+4, train_loss_epoch=1.6e+4]FIT Profiler Report
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Action                                                   	|  Mean duration (s)	|  Num calls      	|  Total time (s) 	|  Percentage %   	|
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Total                                                    	|  -              	|  1954986        	|  9735.6         	|  100 %          	|
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  run_training_epoch                                       	|  9724.2         	|  1              	|  9724.2         	|  99.883         	|
+|  run_training_batch                                       	|  0.091888       	|  65165          	|  5987.9         	|  61.505         	|
+|  [LightningModule]TrainingPlan.optimizer_step             	|  0.091748       	|  65165          	|  5978.8         	|  61.411         	|
+|  [Strategy]DDPStrategy.backward                           	|  0.081206       	|  65165          	|  5291.8         	|  54.355         	|
+|  [_TrainingEpochLoop].train_dataloader_next               	|  0.030491       	|  65166          	|  1987.0         	|  20.41          	|
+|  [Strategy]DDPStrategy.training_step                      	|  0.0091941      	|  65165          	|  599.13         	|  6.154          	|
+|  [Strategy]DDPStrategy.batch_to_device                    	|  0.007508       	|  65165          	|  489.26         	|  5.0254         	|
+|  [LightningModule]TrainingPlan.transfer_batch_to_device   	|  0.0073679      	|  65165          	|  480.13         	|  4.9317         	|
+|  [Callback]DeviceStatsMonitor.on_train_batch_end          	|  0.0056449      	|  65165          	|  367.85         	|  3.7784         	|
+|  [Callback]DeviceStatsMonitor.on_train_batch_start        	|  0.0053336      	|  65165          	|  347.56         	|  3.57           	|
+|  [LightningModule]TrainingPlan.optimizer_zero_grad        	|  0.00011965     	|  65165          	|  7.7969         	|  0.080086       	|
+|  [LightningModule]TrainingPlan.configure_gradient_clipping	|  2.9119e-05     	|  65165          	|  1.8976         	|  0.019491       	|
+|  [Callback]DeviceStatsMonitor.on_after_backward           	|  4.5974e-06     	|  65165          	|  0.29959        	|  0.0030772      	|
+|  [LightningModule]TrainingPlan.on_before_batch_transfer   	|  4.3591e-06     	|  65165          	|  0.28406        	|  0.0029178      	|
+|  [Callback]DeviceStatsMonitor.on_before_zero_grad         	|  3.3485e-06     	|  65165          	|  0.21821        	|  0.0022413      	|
+|  [Callback]ProgressBar.on_train_batch_start               	|  2.634e-06      	|  65165          	|  0.17165        	|  0.0017631      	|
+|  [Callback]ProgressBar.on_train_batch_end                 	|  2.3822e-06     	|  65165          	|  0.15523        	|  0.0015945      	|
+|  [Callback]DeviceStatsMonitor.on_before_optimizer_step    	|  2.207e-06      	|  65165          	|  0.14382        	|  0.0014772      	|
+|  [Callback]DeviceStatsMonitor.on_before_backward          	|  2.1275e-06     	|  65165          	|  0.13864        	|  0.001424       	|
+|  [LightningModule]TrainingPlan.on_after_batch_transfer    	|  1.9218e-06     	|  65165          	|  0.12524        	|  0.0012864      	|
+|  [Callback]ProgressBar.on_before_backward                 	|  1.7612e-06     	|  65165          	|  0.11477        	|  0.0011788      	|
+|  [Callback]ProgressBar.on_before_optimizer_step           	|  1.7292e-06     	|  65165          	|  0.11269        	|  0.0011575      	|
+|  [LightningModule]TrainingPlan.on_train_batch_start       	|  1.5398e-06     	|  65165          	|  0.10034        	|  0.0010306      	|
+|  [LightningModule]TrainingPlan.on_before_zero_grad        	|  1.5106e-06     	|  65165          	|  0.09844        	|  0.0010111      	|
+|  [LightningModule]TrainingPlan.on_after_backward          	|  1.4769e-06     	|  65165          	|  0.096244       	|  0.00098857     	|
+|  [Callback]ProgressBar.on_before_zero_grad                	|  1.4765e-06     	|  65165          	|  0.096215       	|  0.00098828     	|
+|  [Callback]ProgressBar.on_after_backward                  	|  1.4006e-06     	|  65165          	|  0.09127        	|  0.00093748     	|
+|  [LightningModule]TrainingPlan.on_train_batch_end         	|  1.3997e-06     	|  65165          	|  0.091211       	|  0.00093687     	|
+|  [LightningModule]TrainingPlan.on_before_backward         	|  1.249e-06      	|  65165          	|  0.081391       	|  0.00083601     	|
+|  [Strategy]DDPStrategy.on_train_batch_start               	|  1.2455e-06     	|  65165          	|  0.081162       	|  0.00083366     	|
+|  [LightningModule]TrainingPlan.on_before_optimizer_step   	|  1.0396e-06     	|  65165          	|  0.067744       	|  0.00069583     	|
+|  [Callback]ProgressBar.on_train_epoch_end                 	|  0.0056603      	|  1              	|  0.0056603      	|  5.814e-05      	|
+|  [LightningDataModule]CensusDataModule.train_dataloader   	|  0.0015843      	|  1              	|  0.0015843      	|  1.6273e-05     	|
+|  [Callback]ProgressBar.on_train_start                     	|  0.001328       	|  1              	|  0.001328       	|  1.3641e-05     	|
+|  [LightningModule]TrainingPlan.configure_optimizers       	|  0.00027431     	|  1              	|  0.00027431     	|  2.8176e-06     	|
+|  [Callback]ProgressBar.on_train_end                       	|  0.00013968     	|  1              	|  0.00013968     	|  1.4347e-06     	|
+|  [Callback]ProgressBar.on_train_epoch_start               	|  7.0185e-05     	|  1              	|  7.0185e-05     	|  7.2091e-07     	|
+|  [Callback]DeviceStatsMonitor.setup                       	|  4.0357e-05     	|  1              	|  4.0357e-05     	|  4.1453e-07     	|
+|  [LightningDataModule]CensusDataModule.setup              	|  1.2547e-05     	|  1              	|  1.2547e-05     	|  1.2888e-07     	|
+|  [Callback]ProgressBar.setup                              	|  1.0949e-05     	|  1              	|  1.0949e-05     	|  1.1246e-07     	|
+|  [Callback]DeviceStatsMonitor.on_fit_start                	|  7.712e-06      	|  1              	|  7.712e-06      	|  7.9214e-08     	|
+|  [LightningModule]TrainingPlan.on_train_start             	|  5.02e-06       	|  1              	|  5.02e-06       	|  5.1563e-08     	|
+|  [Callback]DeviceStatsMonitor.on_train_start              	|  4.668e-06      	|  1              	|  4.668e-06      	|  4.7948e-08     	|
+|  [Callback]DeviceStatsMonitor.on_train_epoch_start        	|  4.612e-06      	|  1              	|  4.612e-06      	|  4.7372e-08     	|
+|  [Callback]ProgressBar.on_fit_start                       	|  4.461e-06      	|  1              	|  4.461e-06      	|  4.5821e-08     	|
+|  [LightningModule]TrainingPlan.setup                      	|  4.251e-06      	|  1              	|  4.251e-06      	|  4.3664e-08     	|
+|  [Callback]DeviceStatsMonitor.on_fit_end                  	|  3.886e-06      	|  1              	|  3.886e-06      	|  3.9915e-08     	|
+|  [Callback]DeviceStatsMonitor.on_train_end                	|  3.553e-06      	|  1              	|  3.553e-06      	|  3.6495e-08     	|
+|  [LightningModule]TrainingPlan.on_fit_start               	|  3.287e-06      	|  1              	|  3.287e-06      	|  3.3763e-08     	|
+|  [LightningModule]TrainingPlan.configure_callbacks        	|  3.161e-06      	|  1              	|  3.161e-06      	|  3.2468e-08     	|
+|  [Callback]DeviceStatsMonitor.on_train_epoch_end          	|  2.584e-06      	|  1              	|  2.584e-06      	|  2.6542e-08     	|
+|  [LightningModule]TrainingPlan.configure_sharded_model    	|  1.976e-06      	|  1              	|  1.976e-06      	|  2.0297e-08     	|
+|  [Callback]DeviceStatsMonitor.teardown                    	|  1.883e-06      	|  1              	|  1.883e-06      	|  1.9341e-08     	|
+|  [LightningModule]TrainingPlan.on_train_epoch_end         	|  1.778e-06      	|  1              	|  1.778e-06      	|  1.8263e-08     	|
+|  [LightningDataModule]CensusDataModule.teardown           	|  1.682e-06      	|  1              	|  1.682e-06      	|  1.7277e-08     	|
+|  [LightningModule]TrainingPlan.on_train_end               	|  1.568e-06      	|  1              	|  1.568e-06      	|  1.6106e-08     	|
+|  [Callback]ProgressBar.teardown                           	|  1.564e-06      	|  1              	|  1.564e-06      	|  1.6065e-08     	|
+|  [LightningDataModule]CensusDataModule.prepare_data       	|  1.512e-06      	|  1              	|  1.512e-06      	|  1.5531e-08     	|
+|  [LightningModule]TrainingPlan.on_fit_end                 	|  1.449e-06      	|  1              	|  1.449e-06      	|  1.4883e-08     	|
+|  [LightningModule]TrainingPlan.on_train_epoch_start       	|  1.38e-06       	|  1              	|  1.38e-06       	|  1.4175e-08     	|
+|  [Callback]ProgressBar.on_fit_end                         	|  1.31e-06       	|  1              	|  1.31e-06       	|  1.3456e-08     	|
+|  [Strategy]DDPStrategy.on_train_start                     	|  1.266e-06      	|  1              	|  1.266e-06      	|  1.3004e-08     	|
+|  [Strategy]DDPStrategy.on_train_end                       	|  1.185e-06      	|  1              	|  1.185e-06      	|  1.2172e-08     	|
+|  [LightningModule]TrainingPlan.prepare_data               	|  9.63e-07       	|  1              	|  9.63e-07       	|  9.8915e-09     	|
+|  [LightningModule]TrainingPlan.teardown                   	|  9.06e-07       	|  1              	|  9.06e-07       	|  9.306e-09      	|
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+training data shape=(33364242, 60664)
+{'strategy': 'ddp_find_unused_parameters_true', 'profiler': 'simple', 'callbacks': [<lightning.pytorch.callbacks.device_stats_monitor.DeviceStatsMonitor object at 0x7f9860937580>]}
+training data shape=(33364242, 60664)
+{'strategy': 'ddp_find_unused_parameters_true', 'profiler': 'simple', 'callbacks': [<lightning.pytorch.callbacks.device_stats_monitor.DeviceStatsMonitor object at 0x7f93291130a0>]}
+training data shape=(33364242, 60664)
+{'strategy': 'ddp_find_unused_parameters_true', 'profiler': 'simple', 'callbacks': [<lightning.pytorch.callbacks.device_stats_monitor.DeviceStatsMonitor object at 0x7fd26be87c40>]}
+	Command being timed: "python census_scvi.py --obs-value-filter is_primary_data == True --torch-devices 4 --soma-buffer-bytes 2097152 --census-uri /mnt/census"
+	User time (seconds): 30730.48
+	System time (seconds): 873.48
+	Percent of CPU this job got: 324%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:42:33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 52908476
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 18589
+	Minor (reclaiming a frame) page faults: 175233939
+	Voluntary context switches: 42812418
+	Involuntary context switches: 1238673
+	Swaps: 0
+	File system inputs: 68215288
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
